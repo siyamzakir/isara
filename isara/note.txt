@@ -1,0 +1,128 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISARA</title>
+</head>
+
+<body>
+  <nav class="isara-nav">
+    <ul class="nav-group-1">
+      <li>
+        <a href="/">
+          <img class="isara-logo" src="/assets/isara.svg" width="114" height="54" alt="isara" />
+        </a>
+      </li>
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/quantum-threat">Quantum Threat</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/company">Company</a></li>
+    </ul>
+    <ul class="nav-group-2">
+      <li>
+        <a href="/">
+          <img class="social-logos" src="/assets/instagram.svg" width="21" height="21" alt="instagram" />
+        </a>
+      </li>
+      <li>
+        <a href="/">
+          <img class="social-logos" src="/assets/linkedin.svg" width="21" height="21" alt="linkedin" />
+        </a>
+      </li>
+      <li>
+        <a href="/">
+          <img class="social-logos" src="/assets/twitter-x.svg" width="21" height="21" alt="x" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <div class="">
+        <h1>
+          Quantum-Ready Security for the Critical Infrastructure Era
+        </h1>
+        <p>
+          Accelerate cryptographic resilience with trusted solutions for regulated industries.
+          Accelerate cryptographic resilience with trusted solutions for regulated industries.
+        </p>
+        <div>
+          <button type="button">Book Quantum-Readiness Demo</button>
+          <button type="button">
+            <span>Why Quantum Now?</span>
+            <img src="/assets/arrow-down.svg" alt="arrow-down" height="16" width="16" />
+          </button>
+        </div>
+      </div>
+      <div class="">
+        <img src="/assets/hero.png" alt="hero" width="499" height="427" />
+      </div>
+    </section>
+    <section>
+      <h1>Built for Real-World Cryptographic Modernization</h1>
+      <img src="/assets/secbg.png" alt="bg" />
+      <div class="sec_card_lists">
+        <div class="card">
+          <div class="logo">
+            <img src="/assets/isec2a.svg" width="55" height="58" alt="isec2a" />
+          </div>
+          <div class="des">
+            <h6>Asset Discovery</h6>
+            <p>Agentless discovery with integration support for NDR, EDR, and SIEM tools
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="logo">
+            <img src="/assets/isec2b.svg" width="55" height="58" alt="isec2b" />
+          </div>
+          <div class="des">
+            <h6>Posture Scoring</h6>
+            <p>Includes prioritized remediation recommendations to reduce algorithm risk and improve
+              compliance alignment</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="logo">
+            <img src="/assets/isec2c.svg" width="55" height="58" alt="isec2c" />
+          </div>
+          <div class="des">
+            <h6>Crypto Agility</h6>
+            <p>Migrate to post-quantum cryptography while maintaining interoperability with legacy systems
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="logo">
+            <img src="/assets/isec2d.svg" width="55" height="58" alt="isec2d" />
+          </div>
+          <div class="des">
+            <h6>Testing & Validation</h6>
+            <p>Validate quantum-safe implementations in operational PoC environments using modified Firefox,
+              OpenSSL, and other open-source systems</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h1>Unmanaged Cryptography Is the Real Vulnerability</h1>
+        <p>Visibility gaps, inconsistent governance, and aging cryptography are silently undermining your enterprise's
+          risk posture.</p>
+        <button type="button">
+          <span>See How We Solve This</span>
+          <img src="/assets/arrow-down.svg" alt="arrow-down" width="16" height="16" />
+        </button>
+
+      </div>
+
+      <img src="/assets/sec3.png" alt="problems" />
+
+    </section>
+  </main>
+</body>
+
+</html>

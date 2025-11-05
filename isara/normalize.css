@@ -1,0 +1,159 @@
+/* "normalize" styles */
+
+/* 1. Box sizing and root defaults */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margins and set core body defaults */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+/* 3. Make images and media elements responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 4. Preserve aspect ratio for media and align baseline for replaced elements */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+audio,
+video {
+    max-width: 100%;
+}
+
+/* 5. Improve text rendering in pre/code and set monospace defaults */
+pre,
+code,
+kbd,
+samp {
+    font-family: SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+/* 6. Make form controls inherit font settings */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+/* 7. Remove default button styles where helpful */
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 8. Remove list styles where appropriate */
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 9. Links: inherit color, preserve underline behavior with skip-ink */
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    text-decoration-skip-ink: auto;
+}
+
+/* 10. Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 11. Horizontal rule */
+hr {
+    height: 1px;
+    border: none;
+    background-color: currentColor;
+    opacity: 0.08;
+}
+
+/* 12. Hidden attribute */
+[hidden] {
+    display: none !important;
+}
+
+/* 13. Fieldset legend reset */
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 14. Accessibility helpers (visually hidden) */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
+/* 15. Selection (optional subtle highlight) */
+::selection {
+    background-color: rgba(179, 212, 252, 0.6);
+    color: inherit;
+}
+
+/* 16. Utility: consistent small text */
+small {
+    font-size: 80%;
+}
+
+
+
+/* End of normalize */
+
+.button:focus,
+.button:active,
+.button:focus-visible {
+    outline: none;
+}
