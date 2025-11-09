@@ -90,8 +90,8 @@ body {
 }
 
 .isara-btn-danger {
-    background-color: var(--ISARA-Red, #EC1C24);
-    color: #FFF;
+    background-color: var(--ISARA-Red, #EC1C24) !important;
+    color: #FFF !important;
     transition: background-color 0.3s ease;
 }
 
