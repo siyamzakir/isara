@@ -14,7 +14,7 @@
 }
 
 /* Buttons */
-.isara-btn {
+.isara-btn-contact {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -28,23 +28,17 @@
     line-height: normal !important;
     letter-spacing: -0.42px !important;
     cursor: pointer !important;
-
-}
-
-.isara-btn-danger {
     background-color: var(--ISARA-Red, #EC1C24) !important;
     color: #FFF !important;
     transition: background-color 0.3s ease !important;
+
 }
 
 .site-header {
     padding-top: var(--ISARA-Navbar-Height) !important;
 }
 
-.dropdown-toggle:after,
-a {
-    color: var(--ISARA-Black) !important;
-}
+
 
 .isara-navbar {
     position: fixed !important;
@@ -54,6 +48,31 @@ a {
     width: 100% !important;
     background-color: var(--ISARA-White) !important;
     z-index: 1000 !important;
+}
+
+/* List reset - scoped to navbar only */
+.isara-navbar ol,
+.isara-navbar ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Link reset - scoped to navbar only */
+.isara-navbar a {
+    color: var(--ISARA-Black) !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    text-decoration-skip-ink: auto !important;
+}
+
+/* Button reset - scoped to navbar only */
+.isara-navbar button {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    outline: none !important;
 }
 
 .isara-navbar__container {
