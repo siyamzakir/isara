@@ -805,7 +805,7 @@ body {
 .slider_item_content {
     max-width: 460px;
     list-style: disc;
-    list-style-position: inside;
+    list-style-position: outside;
     font-size: 12px;
     font-weight: 300;
     line-height: 24px;
@@ -813,7 +813,7 @@ body {
 }
 
 .slider_item_content li {
-    padding-left: 12px;
+    margin-left: 16px;
 }
 
 .slider_item_media {
@@ -875,6 +875,10 @@ body {
         font-size: 18px;
         font-weight: 300;
         line-height: 24px;
+    }
+
+    .slider_item_content li {
+        margin-left: 32px;
     }
 
 
