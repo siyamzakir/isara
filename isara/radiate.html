@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISARA</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/advance.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav id="isaraMainNav" class="isara-navbar" role="navigation" aria-label="Main navigation">
+            <div class="isara-navbar__container">
+                <a class="site-header__logo" href="/" aria-label="ISARA home">
+                    <img src="/assets/LTS/assets/isara.svg" width="114" height="54" alt="ISARA logo" />
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="isara-navbar__toggler" type="button" id="navbarToggler" aria-expanded="false"
+                    aria-controls="navbarCollapse" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="isara-navbar__collapse" id="navbarCollapse">
+                    <ul class="isara-navbar__nav">
+                        <!-- Products Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/products/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="products">
+                                Products
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-products">
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-advance-cryptographic-inventory-and-risk-assessment-tool.html">
+                                        ISARA Advance® Cryptographic Inventory and Risk Assessment
+                                        Tool
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/products/isara-radiate.html">
+                                        ISARA Radiate™ Quantum-safe Toolkit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-catalyst-agile-digital-certificate-methodology.html">
+                                        ISARA Catalyst™ Crypto Agile PKI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-catalyst-connector-for-openssl.html">
+                                        ISARA Catalyst™ Quantum-safe TLS
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-quantum-safe-ots-poc-system.html">
+                                        ISARA Quantum-safe OTS PoC System
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Solutions Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/solutions/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="solutions">
+                                Solutions
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-solutions">
+                                <li>
+                                    <h6 class="isara-dropdown-header">Use Cases</h6>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/solutions/use-cases/crypto-agility-in-pkis.html">
+                                        Crypto Agility in PKIs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/solutions/use-cases/cryptographic-inventories.html">
+                                        Cryptographic Inventories
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/solutions/use-cases/protect-against-harvest-decrypt.html">
+                                        Protect Against Harvest & Decrypt
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Resources Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/resources/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="resources">
+                                Resources
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-resources">
+                                <li>
+                                    <a class="isara-dropdown-item" href="/blog-posts/">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/resources/what-is-quantum-safe.html">
+                                        What is Quantum-safe?
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Partners Link -->
+                        <li class="isara-nav-item">
+                            <a class="isara-nav-link" href="/partners.html">Partners</a>
+                        </li>
+
+                        <!-- Company Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/company/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="company">
+                                Company
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-company">
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/leadership-team.html">
+                                        Leadership Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/newsroom/">Newsroom</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/careers/">Careers</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/conferences-and-events.html">
+                                        Conferences & Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/executive-roundtable-dinners.html">
+                                        Executive Roundtable Dinners
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="site-nav_items" aria-label="Social media links">
+                        <li class="social__item">
+                            <a class="social__link" target="_blank" href="https://www.twitter.com/isaracorp"
+                                aria-label="X / Twitter">
+                                <img src="/assets/LTS/assets/twitter-x.svg" width="18" height="18" alt="X / Twitter" />
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a class="social__link"
+                                href="https://www.linkedin.com/company/isara-corporation?trk=company_logo"
+                                target="_blank" aria-label="LinkedIn">
+                                <img src="/assets/LTS/assets/linkedin.svg" width="18" height="18" alt="LinkedIn" />
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.youtube.com/@ISARACorp" target="_blank"
+                                aria-label="Youtube">
+                                <img src="/assets/LTS/assets/youtube.svg" width="24" height="24" alt="Youtube" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <button class="isara-btn-contact">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main" id="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <figure class="hero__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container hero_inner">
+                <h2 class="isara-h2">
+                    Quantum Safe and Hybrid Cryptography Toolkit
+                </h2>
+                <p class="isara-p-lg">
+                    Integrate NIST aligned PQC algorithms for embedded, hybrid, and enterprise systems.
+                </p>
+                <div class="hero__actions">
+                    <button class="isara-btn isara-btn-danger" type="button">
+                        Book Your ISARA Advance Demo
+                    </button>
+                    <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                        aria-controls="why-quantum">
+                        <span>See How It Works</span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </button>
+                </div>
+                <div class="hero__features">
+                    <div class="hero__feature__container">
+                        <div class="hero_square_orange"></div>
+                        <h4 class="hero_feature_title">Hybrid and PQC algorithm support</h4>
+                    </div>
+                    <div class="hero__feature__container">
+                        <div class="hero_square_orange"></div>
+                        <h4 class="hero_feature_title">Developer ready integration tools</h4>
+                    </div>
+                    <div class="hero__feature__container">
+                        <div class="hero_square_orange"></div>
+                        <h4 class="hero_feature_title">Validated performance and crypto agility</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product">
+            <div class="container product_inner">
+                <div class="product_content_container">
+                    <figure class="product_media">
+                        <img src="/assets/LTS/assets/product/product_advance.png"
+                            alt="Screenshot of ISARA Advance dashboard" width="411" height="424" />
+                    </figure>
+                    <div class="product_content">
+                        <p class="product_head">
+                            ISARA Radiate
+                        </p>
+                        <h3 class="isara-h3">
+                            Upgrade Legacy Cryptography with Quantum-Safe Algorithms and Governance
+                        </h3>
+                        <p class="isara-p-lg">
+                            Most systems rely on algorithms that will fail against future quantum attacks. Radiate gives
+                            teams the tools to implement PQC and hybrid certificates without disruption.
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="product_how_it_works">
+                    <div class="product_content">
+                        <h2 class="isara-h2">
+                            How ISARA Radiate Works
+                        </h2>
+                        <p class="isara-p-lg">
+                            A three-step workflow that helps teams implement, validate and deploy quantum-safe
+                            cryptography across embedded, IoT and enterprise systems.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="features container features_inner  ">
+            <div class="features_inner_container">
+                <div class="features_content">
+                    <p class="product_head">
+                        Integrate
+                    </p>
+                    <h2 class="isara-h2">
+                        Quantum-Safe Implementation
+                    </h2>
+                    <p class="isara-p-lg">
+                        Introduce NIST-aligned PQC algorithms and hybrid certificates into existing systems without
+                        breaking compatibility.
+                    </p>
+
+                </div>
+                <div class="features_content_container">
+                    <figure class="features_media">
+                        <img src="/assets/LTS/assets/product/features_a.png" alt="Complete Cryptographic Mapping"
+                            width="336" height="210" />
+                        <figcaption>
+                            Radiate provides modular, developer-ready libraries so security teams can integrate PQC and
+                            hybrid cryptography with minimal rewrite effort.
+                        </figcaption>
+                    </figure>
+                    <ul class="features_list">
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Implement CRYSTALS-Kyber, Dilithium and other NIST-selected PQC
+                                algorithms</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Use hybrid certificates for classical-to-PQC compatibility</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Reduce rewrite work with modular, drop-in libraries</h4>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="features_inner_container">
+                <div class="features_content">
+                    <p class="product_head">
+                        Verify
+                    </p>
+                    <h2 class="isara-h2">
+                        Performance & Compatibility Validation
+                    </h2>
+                    <p class="isara-p-lg">
+                        Test cryptographic performance, interoperability and stability using modified open-source tools
+                        and SDKs.
+                    </p>
+
+                </div>
+                <div class="features_content_container product-row-reverse">
+                    <figure class="features_media">
+                        <img src="/assets/LTS/assets/product/features_b.png" alt="Exposure & Posture Analysis"
+                            width="336" height="210" />
+                        <figcaption>
+                            Test cryptographic performance, interoperability and stability using modified open-source
+                            tools and SDKs
+                        </figcaption>
+                    </figure>
+                    <ul class="features_list">
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Validate protocol compatibility using modified Firefox, OpenSSL and
+                                NSS</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Benchmark performance overhead and algorithm behavior</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Confirm hybrid certificate interoperability across systems </h4>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="features_inner_container">
+                <div class="features_content">
+                    <p class="product_head">
+                        Migrate
+                    </p>
+                    <h2 class="isara-h2">
+                        Crypto-Agile Deployment
+                    </h2>
+                    <p class="isara-p-lg">
+                        Roll out PQC and hybrid cryptography across embedded, IoT and enterprise systems with confidence
+                        and long-term flexibility.
+                    </p>
+
+                </div>
+                <div class="features_content_container">
+                    <figure class="features_media">
+                        <img src="/assets/LTS/assets/product/features_c.png" alt="Remediation & Modernization"
+                            width="336" height="210" />
+                        <figcaption>
+                            Radiate enables crypto-agility by ensuring systems can adopt new algorithms without
+                            disrupting existing infrastructure.
+                        </figcaption>
+                    </figure>
+                    <ul class="features_list">
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Deploy PQC at scale across embedded, IoT and enterprise environments
+                            </h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Maintain long-term cryptographic agility as standards evolve</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Prepare systems for quantum-safe readiness across architectures</h4>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="features__actions">
+                <button class="isara-btn isara-btn-danger" type="button">
+                    Book Your Demo
+                </button>
+                <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false" aria-controls="why-quantum">
+                    <span>Go to Advance for Posture Discovery</span>
+                    <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                </button>
+            </div>
+        </section>
+        <section class="integrate">
+            <figure class="cta__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container integrate_inner">
+                <h3 class="isara-h3">
+                    Seamless PQC Integration for Embedded, Cloud, and Certificate Platforms
+                </h3>
+                <p class="isara-p-lg">
+                    Radiate integrates with developer environments, embedded platforms and certificate systems to enable
+                    crypto-agility and seamless PQC migration.
+                </p>
+
+                <div class="integrate_list_container">
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Security Stack</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">OpenSSL / NSS Extensions</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Secure Messaging Protocols</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Hybrid Certificate Validation</span>
+                    </div>
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Infrastructure</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">Embedded System Toolchains</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">IoT Device Frameworks</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Enterprise Application Environments</span>
+
+                    </div>
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Certificate & Identity</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">Certificate Management Systems</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Hybrid Certificate Workflows</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">PKI Integration</span>
+                    </div>
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Developer Tools</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">SDKs & Libraries</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Testing & Validation Harnesses</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Cloud APIs</span>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="industries container industries_inner">
+            <div class="industries_content">
+                <h1 class="isara-h2">
+                    Systems Built Today Will Be Vulnerable Long Before They're Retired
+                </h1>
+                <p class="isara-p-lg">
+                    Quantum disruption is not a someday issue. Threat actors are harvesting encrypted data now, waiting
+                    until PQC-breaking capability catches up. Systems with long lifecycles, embedded devices and
+                    infrastructure components deployed today will remain vulnerable for decades. Radiate gives teams a
+                    way to implement, validate and deploy quantum-safe cryptography before the window closes.
+                </p>
+            </div>
+            <div class="industries_cards">
+                <div class="cards-row">
+
+                    <div class="industries_card_header">
+                        <div class="square_orange"></div>
+                        <h4 class="card_heading">Long-Lived Systems Are Already at Risk</h4>
+                    </div>
+                    <p class="card_desc">
+                        Automotive, medical, industrial and IoT devices deployed today will outlive classical
+                        cryptography.
+                    </p>
+
+                </div>
+                <div class="cards-row">
+
+                    <div class="industries_card_header">
+                        <div class="square_orange"></div>
+                        <h4 class="card_heading">PQC Migration Takes Years, Not Months</h4>
+                    </div>
+                    <p class="card_desc">
+                        Developer integration, testing and compatibility work cannot be rushed once standards become
+                        mandatory.
+                    </p>
+
+                </div>
+                <div class="cards-row">
+
+                    <div class="industries_card_header">
+                        <div class="square_orange"></div>
+                        <h4 class="card_heading">Quantum Deadline Is Not Negotiable</h4>
+                    </div>
+                    <p class="card_desc">
+                        Once quantum attacks arrive, any classical-encrypted data harvested today becomes instantly
+                        readable.
+                    </p>
+
+                </div>
+                <button class="isara-btn isara-btn-cta" type="button" aria-controls="how-we-solve">
+                    Access Your Risk
+                    <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                </button>
+            </div>
+        </section>
+
+        <section class="risk">
+            <figure class="features__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg.png" alt="bg" width="1280" height="720" />
+            </figure>
+
+            <div class="container risk_inner">
+                <h2 class="isara-h2">
+                    Where Radiate Accelerates Quantum-Safe Readiness in Key Industries
+                </h2>
+
+                <div class="risk_slider">
+                    <div class="risk_slider_controls">
+                        <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                            aria-controls="why-quantum">
+                            <span>Financial Services </span>
+                            <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16"
+                                aria-hidden="true" />
+                        </button>
+                        <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                            aria-controls="why-quantum">
+                            <span>Government & Public Sector </span>
+                        </button>
+                        <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                            aria-controls="why-quantum">
+                            <span>Energy & Utilities </span>
+                        </button>
+                    </div>
+                    <div class="risk_slider_content">
+                        <div class="risk_slider_item">
+                            <ul class="slider_item_content">
+                                PQC readiness is essential for long-lived financial data and high-value transactions.
+                                <br />
+                                <br />
+                                <li>
+                                    Implement hybrid certificates in core banking and payment systems
+                                </li>
+                                <li>
+                                    Validate PQC performance for trading workloads and messaging protocols
+                                </li>
+                                <li>
+                                    Support long-term data confidentiality for archival transaction records
+                                </li>
+                                </li>
+                            </ul>
+                            <figure class="slider_item_media">
+                                <img src="/assets/LTS/assets/product/risk_stack.png" alt="Financial Services"
+                                    width="190" height="180" />
+                            </figure>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="risk__actions">
+                    <button class="isara-btn isara-btn-danger" type="button">
+                        Dive Deeper With Our Team
+                    </button>
+                    <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                        aria-controls="why-quantum">
+                        <span>Learn More </span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="advantage container advantage_inner">
+            <h2 class="isara-h2">
+                The ISARA Advantage</h2>
+            <div class="advantage_cards">
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Developer Integration Support
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Assistance integrating PQC and hybrid algorithms into codebases, firmware and embedded systems.
+                    </p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Access to Validation Tools
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Use of modified OpenSSL, NSS and Firefox builds for testing performance, compatibility and
+                        interoperability.
+                    </p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Architecture Guidance for Crypto-Agility
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Help designing systems that can evolve from classical → hybrid → PQC without rewrites.
+                    </p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Ongoing Standards Tracking & Updates
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Continuous updates aligned to NIST PQC selections, parameter changes and evolving requirements.
+                    </p>
+                </div>
+
+            </div>
+            <p class=" advantage_footer">
+                You get expert support that helps your teams deploy PQC correctly, validate performance and maintain
+                long-term crypto-agility.
+            </p>
+        </section>
+
+        <section class="cta">
+            <figure class="cta__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container cta_inner">
+                <h2 class="isara-h2">
+                    Modernize Your Cryptography for the Quantum Era
+                </h2>
+                <p class="isara-p-lg">
+                    Implement, validate and deploy PQC and hybrid cryptography with developer-ready tools and
+                    standards-backed guidance.
+                </p>
+                <div class="hero__actions">
+                    <button class="isara-btn isara-btn-danger" type="button">
+                        Request a Demo
+                    </button>
+                    <button class="isara-btn isara-btn-cta" type="button">
+                        <span>Explore Radiate </span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer_inner">
+            <div class="footer_company">
+                <a href="/" aria-label="ISARA home">
+                    <img src="/assets/LTS/assets/logo_white.svg" width="183" height="88" alt="ISARA logo" />
+                </a>
+                <img src="/assets/LTS/assets/founded.png" width="166" height="92" alt="founded" />
+                <ul class="footer-social-links" aria-label="Social media links">
+                    <li>
+                        <a href="https://www.twitter.com/isaracorp" target="_blank" aria-label="X / Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path
+                                    d="M16.5375 1.00879H19.7593L12.7225 9.04916L21 19.9919H14.5206L9.44213 13.3568L3.63738 19.9919H0.410375L7.93538 11.3898L0 1.00879H6.64387L11.2297 7.07341L16.5375 1.00879ZM15.4061 18.066H17.1902L5.67175 2.83404H3.7555L15.4061 18.066Z"
+                                    fill="white" fill-opacity="0.45" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/isara-corporation?trk=company_logo" target="_blank"
+                            aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <g clip-path="url(#clip0_1_625)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M21 2.625C21 1.1762 19.8238 0 18.375 0H2.625C1.1762 0 0 1.1762 0 2.625V18.375C0 19.8238 1.1762 21 2.625 21H18.375C19.8238 21 21 19.8238 21 18.375V2.625Z"
+                                        fill="white" fill-opacity="0.45" />
+                                    <path d="M6.02138 7.32727H2.50388V17.9077H6.02138V7.32727Z" fill="black" />
+                                    <path
+                                        d="M4.28663 2.22595C3.08319 2.22595 2.29688 3.01714 2.29688 4.05414C2.29688 5.06936 3.05927 5.88237 4.24007 5.88237H4.26279C5.48928 5.88237 6.25271 5.06936 6.25271 4.05414C6.22995 3.01714 5.48937 2.22595 4.28663 2.22595Z"
+                                        fill="black" />
+                                    <path
+                                        d="M14.654 7.07861C12.7882 7.07861 11.9525 8.1047 11.4845 8.82543V7.32741H7.96793C8.01456 8.31987 7.96793 17.9078 7.96793 17.9078H11.4845V11.999C11.4845 11.6827 11.5072 11.3665 11.6004 11.1405C11.8542 10.5088 12.4333 9.85455 13.4048 9.85455C14.6768 9.85455 15.1864 10.8251 15.1864 12.2469V17.9078H18.7031V11.8404C18.7031 8.59045 16.9679 7.07861 14.654 7.07861Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_625">
+                                        <rect width="21" height="21" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@ISARACorp" target="_blank" aria-label="Youtube">
+                            <svg width="32" height="22" viewBox="0 0 32 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31.6812 4.74701C31.6812 4.74701 31.3688 2.59039 30.4062 1.64343C29.1875 0.397112 27.825 0.391002 27.2 0.317689C22.725 -1.74792e-07 16.0063 0 16.0063 0H15.9937C15.9937 0 9.275 -1.74792e-07 4.8 0.317689C4.175 0.391002 2.8125 0.397112 1.59375 1.64343C0.63125 2.59039 0.325 4.74701 0.325 4.74701C0.325 4.74701 0 7.28242 0 9.81172V12.1822C0 14.7115 0.31875 17.2469 0.31875 17.2469C0.31875 17.2469 0.63125 19.4035 1.5875 20.3505C2.80625 21.5968 4.40625 21.554 5.11875 21.6884C7.68125 21.9267 16 22 16 22C16 22 22.725 21.9878 27.2 21.6762C27.825 21.6029 29.1875 21.5968 30.4062 20.3505C31.3688 19.4035 31.6812 17.2469 31.6812 17.2469C31.6812 17.2469 32 14.7176 32 12.1822V9.81172C32 7.28242 31.6812 4.74701 31.6812 4.74701ZM12.6938 15.0597V6.26826L21.3375 10.6793L12.6938 15.0597Z"
+                                    fill="#606060" />
+                            </svg>
+
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="footer-links-container">
+                <div class="footer-links">
+                    <h6>Features</h6>
+                    <a href="/">Core Features</a>
+                    <a href="/">Solutions</a>
+                    <a href="/">Products</a>
+                </div>
+                <div class="footer-links">
+                    <h6>Learn More</h6>
+                    <a href="/">Blog</a>
+                    <a href="/">Industries</a>
+                    <a href="/">Case studies</a>
+                </div>
+                <div class="footer-links">
+                    <h6>Information</h6>
+                    <a href="/">Contact</a>
+                    <a href="/">Support</a>
+                    <a href="/">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/index.js"></script>
+</body>
+
+</html>

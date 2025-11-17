@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISARA</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/advance.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav id="isaraMainNav" class="isara-navbar" role="navigation" aria-label="Main navigation">
+            <div class="isara-navbar__container">
+                <a class="site-header__logo" href="/" aria-label="ISARA home">
+                    <img src="/assets/LTS/assets/isara.svg" width="114" height="54" alt="ISARA logo" />
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="isara-navbar__toggler" type="button" id="navbarToggler" aria-expanded="false"
+                    aria-controls="navbarCollapse" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="isara-navbar__collapse" id="navbarCollapse">
+                    <ul class="isara-navbar__nav">
+                        <!-- Products Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/products/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="products">
+                                Products
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-products">
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-advance-cryptographic-inventory-and-risk-assessment-tool.html">
+                                        ISARA Advance® Cryptographic Inventory and Risk Assessment
+                                        Tool
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/products/isara-radiate.html">
+                                        ISARA Radiate™ Quantum-safe Toolkit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-catalyst-agile-digital-certificate-methodology.html">
+                                        ISARA Catalyst™ Crypto Agile PKI
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-catalyst-connector-for-openssl.html">
+                                        ISARA Catalyst™ Quantum-safe TLS
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/products/isara-quantum-safe-ots-poc-system.html">
+                                        ISARA Quantum-safe OTS PoC System
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Solutions Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/solutions/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="solutions">
+                                Solutions
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-solutions">
+                                <li>
+                                    <h6 class="isara-dropdown-header">Use Cases</h6>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/solutions/use-cases/crypto-agility-in-pkis.html">
+                                        Crypto Agility in PKIs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/solutions/use-cases/cryptographic-inventories.html">
+                                        Cryptographic Inventories
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item"
+                                        href="/solutions/use-cases/protect-against-harvest-decrypt.html">
+                                        Protect Against Harvest & Decrypt
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Resources Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/resources/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="resources">
+                                Resources
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-resources">
+                                <li>
+                                    <a class="isara-dropdown-item" href="/blog-posts/">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/resources/what-is-quantum-safe.html">
+                                        What is Quantum-safe?
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Partners Link -->
+                        <li class="isara-nav-item">
+                            <a class="isara-nav-link" href="/partners.html">Partners</a>
+                        </li>
+
+                        <!-- Company Dropdown -->
+                        <li class="isara-nav-item dropdown">
+                            <a class="isara-nav-link dropdown-toggle" href="/company/" role="button"
+                                aria-haspopup="true" aria-expanded="false" data-dropdown="company">
+                                Company
+                            </a>
+                            <ul class="isara-dropdown-menu" id="dropdown-company">
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/leadership-team.html">
+                                        Leadership Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/newsroom/">Newsroom</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/careers/">Careers</a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/conferences-and-events.html">
+                                        Conferences & Events
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="isara-dropdown-item" href="/company/executive-roundtable-dinners.html">
+                                        Executive Roundtable Dinners
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="site-nav_items" aria-label="Social media links">
+                        <li class="social__item">
+                            <a class="social__link" target="_blank" href="https://www.twitter.com/isaracorp"
+                                aria-label="X / Twitter">
+                                <img src="/assets/LTS/assets/twitter-x.svg" width="18" height="18" alt="X / Twitter" />
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a class="social__link"
+                                href="https://www.linkedin.com/company/isara-corporation?trk=company_logo"
+                                target="_blank" aria-label="LinkedIn">
+                                <img src="/assets/LTS/assets/linkedin.svg" width="18" height="18" alt="LinkedIn" />
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.youtube.com/@ISARACorp" target="_blank"
+                                aria-label="Youtube">
+                                <img src="/assets/LTS/assets/youtube.svg" width="24" height="24" alt="Youtube" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <button class="isara-btn-contact">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main" id="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <figure class="hero__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container hero_inner">
+                <h2 class="isara-h2">
+                    Cryptographic Inventory and Posture Intelligence at Scale
+                </h2>
+                <p class="isara-p-lg">
+                    Map your cryptography, score your posture, and reduce algorithm risk across the entire environment
+                    with ISARA Advance®.
+                </p>
+                <div class="hero__actions">
+                    <button class="isara-btn isara-btn-danger" type="button">
+                        Book Your ISARA Advance Demo
+                    </button>
+                    <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                        aria-controls="why-quantum">
+                        <span>See How It Works</span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </button>
+                </div>
+                <div class="hero__features">
+                    <div class="hero__feature__container">
+                        <div class="hero_square_orange"></div>
+                        <h4 class="hero_feature_title">Full cryptographic visibility</h4>
+                    </div>
+                    <div class="hero__feature__container">
+                        <div class="hero_square_orange"></div>
+                        <h4 class="hero_feature_title">Clear posture scoring and risk insights</h4>
+                    </div>
+                    <div class="hero__feature__container">
+                        <div class="hero_square_orange"></div>
+                        <h4 class="hero_feature_title">Actionable remediation priorities</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product">
+            <div class="container product_inner">
+                <div class="product_content_container">
+                    <figure class="product_media">
+                        <img src="/assets/LTS/assets/product/product_advance.png"
+                            alt="Screenshot of ISARA Advance dashboard" width="411" height="424" />
+                    </figure>
+                    <div class="product_content">
+                        <p class="product_head">
+                            ISARA Advance®
+                        </p>
+                        <h3 class="isara-h3">
+                            Upgrade Legacy Cryptography with Quantum-Safe Algorithms and Governance
+                        </h3>
+                        <p class="isara-p-lg">
+                            Enterprises run legacy encryption, unmanaged keys, and inconsistent governance. Advance
+                            brings
+                            full visibility to your cryptographic posture so you can reduce risk, prepare for audits,
+                            and
+                            support quantum readiness.
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="product_how_it_works">
+                    <div class="product_content">
+                        <h2 class="isara-h2">
+                            How ISARA Advance® Works
+                        </h2>
+                        <p class="isara-p-lg">
+                            A clear three-phase workflow that gives teams full cryptographic visibility, actionable risk
+                            insight and a path to modernization.
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="features container features_inner  ">
+            <div class="features_inner_container">
+                <div class="features_content">
+                    <p class="product_head">
+                        DISCOVER
+                    </p>
+                    <h2 class="isara-h2">
+                        Complete Cryptographic Mapping
+                    </h2>
+                    <p class="isara-p-lg">
+                        Agentless discovery locates keys, certificates, algorithms and dependencies across cloud,
+                        on-prem and hybrid environments.
+                    </p>
+
+                </div>
+                <div class="features_content_container">
+                    <figure class="features_media">
+                        <img src="/assets/LTS/assets/product/features_a.png" alt="Complete Cryptographic Mapping"
+                            width="336" height="210" />
+                        <figcaption>
+                            Advance builds a unified cryptographic inventory so teams can finally see what exists, where
+                            it lives and how it's used.
+                        </figcaption>
+                    </figure>
+                    <ul class="features_list">
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Detect unmanaged and hidden cryptographic assets</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Identify certificate locations across networks and endpoints</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Map algorithm types, key lengths and dependencies</h4>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="features_inner_container">
+                <div class="features_content">
+                    <p class="product_head">
+                        Assess
+                    </p>
+                    <h2 class="isara-h2">
+                        Exposure & Posture Analysis
+                    </h2>
+                    <p class="isara-p-lg">
+                        Cryptographic posture scoring highlights algorithm risk, misconfigurations and expiry exposure
+                        across your systems.
+                    </p>
+
+                </div>
+                <div class="features_content_container product-row-reverse">
+                    <figure class="features_media">
+                        <img src="/assets/LTS/assets/product/features_b.png" alt="Exposure & Posture Analysis"
+                            width="336" height="210" />
+                        <figcaption>
+                            Advance classifies every cryptographic asset, evaluates its strength and surfaces weaknesses
+                            that affect compliance and long-term security.
+                        </figcaption>
+                    </figure>
+                    <ul class="features_list">
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Detect weak or deprecated algorithms (RSA, ECC and more)</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Identify expiration, ownership, and configuration gaps</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Score cryptographic posture for audit and compliance alignment </h4>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="features_inner_container">
+                <div class="features_content">
+                    <p class="product_head">
+                        Prepare
+                    </p>
+                    <h2 class="isara-h2">
+                        Remediation & Modernization
+                    </h2>
+                    <p class="isara-p-lg">
+                        Translate discovery and risk insight into prioritized remediation steps that strengthen your
+                        cryptographic posture and prepare for PQC migration.
+                    </p>
+
+                </div>
+                <div class="features_content_container">
+                    <figure class="features_media">
+                        <img src="/assets/LTS/assets/product/features_c.png" alt="Remediation & Modernization"
+                            width="336" height="210" />
+                        <figcaption>
+                            Advance provides an evidence-driven modernization roadmap so security teams can fix what
+                            matters most and align with future standards.
+                        </figcaption>
+                    </figure>
+                    <ul class="features_list">
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Prioritized remediation actions based on risk and impact</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Reduce algorithm exposure across your estate</h4>
+                        </li>
+                        <li class="features_list_item">
+                            <div class="gray_square_icon"></div>
+                            <h4 class="isara-p-lg">Build a quantum-ready foundation with clear modernization steps</h4>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="features__actions">
+                <button class="isara-btn isara-btn-danger" type="button">
+                    Book Your Demo
+                </button>
+                <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false" aria-controls="why-quantum">
+                    <span>Add Radiate for PQC Integration</span>
+                    <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                </button>
+            </div>
+        </section>
+        <section class="integrate">
+            <figure class="cta__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container integrate_inner">
+                <h3 class="isara-h3">
+                    Integrate Cryptographic Discovery Into Your Security Stack
+                </h3>
+                <p class="isara-p-lg">
+                    Advance integrates with your existing security, infrastructure and certificate systems to centralize
+                    discovery, posture scoring and remediation.
+                </p>
+
+                <div class="integrate_list_container">
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Security Stack</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">SIEM Platforms</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">NDR / Network Detection</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">EDR Telemetry</span>
+                    </div>
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Infrastructure</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">Cloud Infrastructure Providers</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">CMDB / Asset Inventory Tools</span>
+
+                    </div>
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Certificate & Identity</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">Certificate Management Systems</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">PKI Infrastructure</span>
+                    </div>
+                    <div class="integrate_list">
+                        <h4 class="integrate_list_title isara-p-lg">Developer Tools</h4>
+
+                        <div class="red_square_icon"></div>
+                        <span class="isara-p-lg">DevOps / CI Pipelines</span>
+                        <div class="gray_square_icon"></div>
+                        <span class="isara-p-lg">Cloud Key Management APIs</span>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="industries container industries_inner">
+            <div class="industries_content">
+                <h1 class="isara-h2">
+                    Cryptographic Misconfigurations Are Already a Live Exposure
+                </h1>
+                <p class="isara-p-lg">
+                    Organizations are already running vulnerable algorithms, unknown certificates and unmanaged keys
+                    that attackers can harvest today and decrypt later. Advance makes these weaknesses visible
+                    immediately so teams can eliminate blind spots before they turn into breaches, outages or compliance
+                    failures.
+                </p>
+            </div>
+            <div class="industries_cards">
+                <div class="cards-row">
+
+                    <div class="industries_card_header">
+                        <div class="square_orange"></div>
+                        <h4 class="card_heading">Immediate Exposure Visibility</h4>
+                    </div>
+                    <p class="card_desc">
+                        Enterprise scans routinely uncover thousands of unknown or high-risk cryptographic assets in the
+                        first 24 hours.
+                    </p>
+
+                </div>
+                <div class="cards-row">
+
+                    <div class="industries_card_header">
+                        <div class="square_orange"></div>
+                        <h4 class="card_heading">Algorithm Risk Is Happening Now</h4>
+                    </div>
+                    <p class="card_desc">
+                        RSA and ECC are actively targeted for Harvest-Now, Decrypt-Later collection, making weak or
+                        outdated crypto a live vulnerability.
+                    </p>
+
+                </div>
+                <div class="cards-row">
+
+                    <div class="industries_card_header">
+                        <div class="square_orange"></div>
+                        <h4 class="card_heading">Compliance Gaps Become Penalties</h4>
+                    </div>
+                    <p class="card_desc">
+                        Organizations with incomplete crypto inventory cannot prove control, creating audit failures,
+                        downtime and regulatory consequences.
+                    </p>
+
+                </div>
+                <button class="isara-btn isara-btn-cta" type="button" aria-controls="how-we-solve">
+                    Access Your Risk
+                    <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                </button>
+            </div>
+        </section>
+        <section class="risk">
+            <figure class="features__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg.png" alt="bg" width="1280" height="720" />
+            </figure>
+
+            <div class="container risk_inner">
+                <h2 class="isara-h2">
+                    How ISARA Advance Strengthens High-Risk Industries
+                </h2>
+
+                <div class="risk_slider">
+                    <div class="risk_slider_controls">
+                        <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                            aria-controls="why-quantum">
+                            <span>Financial Services </span>
+                            <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16"
+                                aria-hidden="true" />
+                        </button>
+                        <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                            aria-controls="why-quantum">
+                            <span>Government & Public Sector </span>
+
+                        </button>
+                        <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                            aria-controls="why-quantum">
+                            <span>Energy & Utilities </span>
+
+                        </button>
+                    </div>
+                    <div class="risk_slider_content">
+                        <div class="risk_slider_item">
+                            <ul class="slider_item_content">
+                                Cryptography gaps directly impact transaction integrity and regulatory compliance.
+                                <br />
+                                <br />
+                                <li>
+                                    Discover unmanaged certificates across trading, banking and payment systems
+                                </li>
+                                <li>
+                                    Surface weak RSA/ECC algorithms used in legacy financial apps
+                                </li>
+                                <li>
+                                    Strengthen audit readiness for PCI-DSS, SOX and operational resilience mandates
+                                </li>
+                                </li>
+                            </ul>
+                            <figure class="slider_item_media">
+                                <img src="/assets/LTS/assets/product/risk_stack.png" alt="Financial Services"
+                                    width="190" height="180" />
+                            </figure>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="risk__actions">
+                    <button class="isara-btn isara-btn-danger" type="button">
+                        Dive Deeper With Our Team
+                    </button>
+                    <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
+                        aria-controls="why-quantum">
+                        <span>Learn More </span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </button>
+                </div>
+            </div>
+
+        </section>
+        <section class="advantage container advantage_inner">
+            <h2 class="isara-h2">
+                The ISARA Advantage</h2>
+            <div class="advantage_cards">
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Deployment and Environment Guidance
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Support for setting up discovery across hybrid, cloud and on-prem environments based on your
+                        architecture.
+                    </p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Posture Interpretation & Expert Review
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Assistance understanding posture scoring, algorithm risk patterns and modernization priorities.
+                    </p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Integration Support With Existing Tools
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Help connecting Advance insights to SIEM, NDR, EDR and certificate management systems.
+                    </p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
+                    <h4 class="advantage_card_title">
+                        Standards & Compliance Alignment
+                    </h4>
+                    <p class="advantage_card_desc">
+                        Guidance tied to NIST PQC, audit expectations and cryptographic policy updates.
+                    </p>
+                </div>
+
+            </div>
+            <p class=" advantage_footer">
+                You get end-to-end support that turns cryptographic complexity into a governed, measurable, and
+                modernization-ready posture.
+            </p>
+        </section>
+        <section class="cta">
+            <figure class="cta__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container cta_inner">
+                <h2 class="isara-h2">
+                    Take Control of Your Cryptography Before It’s a Liability
+                </h2>
+                <p class="isara-p-lg">
+                    Advance gives you visibility, scoring and guided remediation so you can reduce exposure and prove
+                    control when it matters most.
+                </p>
+                <div class="hero__actions">
+                    <button class="isara-btn isara-btn-danger" type="button">
+                        Request a Demo
+                    </button>
+                    <button class="isara-btn isara-btn-cta" type="button">
+                        <span>Explore Radiate </span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer_inner">
+            <div class="footer_company">
+                <a href="/" aria-label="ISARA home">
+                    <img src="/assets/LTS/assets/logo_white.svg" width="183" height="88" alt="ISARA logo" />
+                </a>
+                <img src="/assets/LTS/assets/founded.png" width="166" height="92" alt="founded" />
+                <ul class="footer-social-links" aria-label="Social media links">
+                    <li>
+                        <a href="https://www.twitter.com/isaracorp" target="_blank" aria-label="X / Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path
+                                    d="M16.5375 1.00879H19.7593L12.7225 9.04916L21 19.9919H14.5206L9.44213 13.3568L3.63738 19.9919H0.410375L7.93538 11.3898L0 1.00879H6.64387L11.2297 7.07341L16.5375 1.00879ZM15.4061 18.066H17.1902L5.67175 2.83404H3.7555L15.4061 18.066Z"
+                                    fill="white" fill-opacity="0.45" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/isara-corporation?trk=company_logo" target="_blank"
+                            aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <g clip-path="url(#clip0_1_625)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M21 2.625C21 1.1762 19.8238 0 18.375 0H2.625C1.1762 0 0 1.1762 0 2.625V18.375C0 19.8238 1.1762 21 2.625 21H18.375C19.8238 21 21 19.8238 21 18.375V2.625Z"
+                                        fill="white" fill-opacity="0.45" />
+                                    <path d="M6.02138 7.32727H2.50388V17.9077H6.02138V7.32727Z" fill="black" />
+                                    <path
+                                        d="M4.28663 2.22595C3.08319 2.22595 2.29688 3.01714 2.29688 4.05414C2.29688 5.06936 3.05927 5.88237 4.24007 5.88237H4.26279C5.48928 5.88237 6.25271 5.06936 6.25271 4.05414C6.22995 3.01714 5.48937 2.22595 4.28663 2.22595Z"
+                                        fill="black" />
+                                    <path
+                                        d="M14.654 7.07861C12.7882 7.07861 11.9525 8.1047 11.4845 8.82543V7.32741H7.96793C8.01456 8.31987 7.96793 17.9078 7.96793 17.9078H11.4845V11.999C11.4845 11.6827 11.5072 11.3665 11.6004 11.1405C11.8542 10.5088 12.4333 9.85455 13.4048 9.85455C14.6768 9.85455 15.1864 10.8251 15.1864 12.2469V17.9078H18.7031V11.8404C18.7031 8.59045 16.9679 7.07861 14.654 7.07861Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_625">
+                                        <rect width="21" height="21" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@ISARACorp" target="_blank" aria-label="Youtube">
+                            <svg width="32" height="22" viewBox="0 0 32 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31.6812 4.74701C31.6812 4.74701 31.3688 2.59039 30.4062 1.64343C29.1875 0.397112 27.825 0.391002 27.2 0.317689C22.725 -1.74792e-07 16.0063 0 16.0063 0H15.9937C15.9937 0 9.275 -1.74792e-07 4.8 0.317689C4.175 0.391002 2.8125 0.397112 1.59375 1.64343C0.63125 2.59039 0.325 4.74701 0.325 4.74701C0.325 4.74701 0 7.28242 0 9.81172V12.1822C0 14.7115 0.31875 17.2469 0.31875 17.2469C0.31875 17.2469 0.63125 19.4035 1.5875 20.3505C2.80625 21.5968 4.40625 21.554 5.11875 21.6884C7.68125 21.9267 16 22 16 22C16 22 22.725 21.9878 27.2 21.6762C27.825 21.6029 29.1875 21.5968 30.4062 20.3505C31.3688 19.4035 31.6812 17.2469 31.6812 17.2469C31.6812 17.2469 32 14.7176 32 12.1822V9.81172C32 7.28242 31.6812 4.74701 31.6812 4.74701ZM12.6938 15.0597V6.26826L21.3375 10.6793L12.6938 15.0597Z"
+                                    fill="#606060" />
+                            </svg>
+
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="footer-links-container">
+                <div class="footer-links">
+                    <h6>Features</h6>
+                    <a href="/">Core Features</a>
+                    <a href="/">Solutions</a>
+                    <a href="/">Products</a>
+                </div>
+                <div class="footer-links">
+                    <h6>Learn More</h6>
+                    <a href="/">Blog</a>
+                    <a href="/">Industries</a>
+                    <a href="/">Case studies</a>
+                </div>
+                <div class="footer-links">
+                    <h6>Information</h6>
+                    <a href="/">Contact</a>
+                    <a href="/">Support</a>
+                    <a href="/">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/index.js"></script>
+</body>
+
+</html>
