@@ -34,6 +34,10 @@
 
 }
 
+.isara-btn-contact:hover {
+    background-color: rgba(236, 28, 36, 0.75) !important;
+}
+
 .site-header {
     padding-top: var(--ISARA-Navbar-Height-SM) !important;
 }

@@ -90,7 +90,7 @@ body {
 }
 
 .isara-btn-danger {
-    background-color: var(--ISARA-Red, #EC1C24) !important;
+    background-color: var(--ISARA-Red, #EC1C24);
     color: #FFF !important;
     transition: background-color 0.3s ease;
 }
@@ -386,8 +386,9 @@ body {
     font-weight: 400;
 }
 
-.risk__content button {
-    margin-top: 20px;
+.risk__content a {
+    margin-top: 24px;
+    justify-self: self-start;
 }
 
 @media (min-width: 768px) {
@@ -436,7 +437,7 @@ body {
     color: #FFF;
 }
 
-.solution_content button {
+.solution_content a {
     color: #FFF;
 }
 
@@ -975,7 +976,7 @@ body {
     color: var(--ISARA-Light-Grey, #5A5756);
 }
 
-.cta_inner button {
+.cta_inner a {
     color: #FFF;
 }
 

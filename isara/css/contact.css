@@ -286,7 +286,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 40px;
     padding: 40px 30px;
 }
@@ -313,7 +312,7 @@ body {
     width: fit-content;
 }
 
-.contact_form_content p span {
+.contact_form_content p a {
     color: var(--ISARA-Red, #EC1C24);
 }
 
@@ -530,7 +529,7 @@ body {
     color: var(--ISARA-Light-Grey, #5A5756);
 }
 
-.cta_inner button {
+.cta_inner a {
     color: #FFF;
 }
 

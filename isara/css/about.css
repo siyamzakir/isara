@@ -934,7 +934,7 @@ body {
     color: var(--ISARA-Light-Grey, #5A5756);
 }
 
-.cta_inner button {
+.cta_inner a {
     color: #FFF;
 }
 

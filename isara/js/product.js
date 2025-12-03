@@ -58,3 +58,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Smooth Scroll to "How It Works" Section
+document.addEventListener('DOMContentLoaded', function() {
+    const howItWorksButton = document.querySelector('a[href="#how-it-works"]');
+    const howItWorksSection = document.getElementById('how-it-works');
+
+    if (howItWorksButton && howItWorksSection) {
+        howItWorksButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            howItWorksSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+});
+

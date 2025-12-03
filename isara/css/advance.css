@@ -88,7 +88,7 @@ body {
 }
 
 .isara-btn-danger {
-    background-color: var(--ISARA-Red, #EC1C24) !important;
+    background-color: var(--ISARA-Red, #EC1C24);
     color: #FFF !important;
     transition: background-color 0.3s ease;
 }
@@ -1068,7 +1068,7 @@ body {
     color: var(--ISARA-Light-Grey, #5A5756);
 }
 
-.cta_inner button {
+.cta_inner a {
     color: #FFF;
 }
 
