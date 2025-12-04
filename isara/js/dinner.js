@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (howItWorksButton && howItWorksSection) {
     howItWorksButton.addEventListener("click", function (e) {
       e.preventDefault();
-      howItWorksSection.scrollIntoView({
+      const offsetTop = howItWorksSection.offsetTop - 120;
+      window.scrollTo({
+        top: offsetTop,
         behavior: "smooth",
-        block: "start",
       });
     });
   }

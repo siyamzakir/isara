@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (aboutMissionButton && aboutMissionSection) {
     aboutMissionButton.addEventListener("click", function (e) {
       e.preventDefault();
-      aboutMissionSection.scrollIntoView({
+      const offsetTop = aboutMissionSection.offsetTop - 120;
+      window.scrollTo({
+        top: offsetTop,
         behavior: "smooth",
-        block: "start",
       });
     });
   }
@@ -20,9 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (meetLeadershipButton && meetLeadershipSection) {
     meetLeadershipButton.addEventListener("click", function (e) {
       e.preventDefault();
-      meetLeadershipSection.scrollIntoView({
+      const offsetTop = meetLeadershipSection.offsetTop - 120;
+      window.scrollTo({
+        top: offsetTop,
         behavior: "smooth",
-        block: "start",
       });
     });
   }
