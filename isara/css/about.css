@@ -361,6 +361,12 @@ body {
     gap: 20px;
 }
 
+.modernization_content>p {
+    color: var(--ISARA-Dark-Grey, #5A5756);
+    line-height: 25px;
+    font-weight: 300;
+}
+
 .modernization_cards {
     display: flex;
     width: 100%;
@@ -426,13 +432,14 @@ body {
 @media (min-width: 768px) {
     .modernization_inner {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         padding: 120px 100px;
         gap: 80px;
     }
 
     .modernization_content {
-        max-width: 441px;
+        max-width: 388px;
         padding: 40px 0;
         gap: 30px;
     }
@@ -716,6 +723,10 @@ body {
    ======================================== */
 
 .leadership {
+    background-color: var(--ISARA-Black, #000);
+}
+
+.leadership_inner {
     display: flex;
     padding: 40px 30px;
     flex-direction: column;
@@ -725,10 +736,20 @@ body {
 .leadership_header {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 40px;
+    color: #FFF;
+}
+
+.leadership_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .leadership_card {
+    background-color: #FFF;
+    border-radius: 24px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -783,13 +804,22 @@ body {
     margin-left: 20px;
 }
 
+.leadership_inner .isara-btn-cta {
+    color: #FFF;
+}
+
 @media (min-width: 768px) {
-    .leadership {
+    .leadership_inner {
         padding: 60px 133px;
         gap: 60px;
     }
 
+    .leadership_cards {
+        gap: 60px;
+    }
+
     .leadership_card {
+        padding: 40px;
         flex-direction: row;
         gap: 64px;
         align-items: center;
@@ -862,7 +892,7 @@ body {
 
 @media (min-width: 768px) {
     .process_inner {
-        padding: 0 100px 120px 100px;
+        padding: 100px 100px 120px 100px;
         gap: 40px;
     }
 
