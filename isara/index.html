@@ -198,11 +198,11 @@
               Book Quantum-Readiness Demo
             </a>
 
-            <a href="/resources/what-is-quantum-safe.html" class="isara-btn isara-btn-cta" aria-expanded="false"
+            <button id="why-quantum-now-btn" class="isara-btn isara-btn-cta" aria-expanded="false"
               aria-controls="why-quantum">
               <span data-fred-name="fred_span_hero_cta_label" data-fred-rte="true">Why Quantum Now?</span>
               <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
-            </a>
+            </button>
           </div>
         </div>
 
@@ -279,7 +279,7 @@
       </div>
     </section>
 
-    <section class="risk" aria-labelledby="risk-heading">
+    <section class="risk" aria-labelledby="risk-heading" id="how-we-solve-section">
       <div class="container risk__inner">
         <div class="risk__content">
           <h2 class="isara-h2">
@@ -307,12 +307,17 @@
     <section class="solution">
       <div class="container solution_inner">
         <div class="solution_content">
-          <p class="solution_head">
-            Advance Cryptographic Inventory & Risk Assessment
-          </p>
+          <div>
+            <p class="solution_head">
+              Advance Cryptographic Inventory & Risk Assessment
+            </p>
+            <img style="margin-top: 24px;" src="/assets/LTS/assets/isara_advance_logo.svg" width="209" height="30"
+              alt="Asset discovery icon" />
+          </div>
           <h2 class="isara-h2">
             See Everything, Miss Nothing in Your Crypto Stack
           </h2>
+
           <p class="isara-p-lg">
             With ISARA Advance®, you can scan and catalog cryptographic assets and primitives across your environment,
             including algorithms, protocols, certificates, and keys. It surfaces hidden dependencies, scores risk, and
@@ -566,7 +571,30 @@
       <div class="resources_cards">
 
         <div class="blog_card">
-          <img class="blog-image" src="/assets/LTS/assets/blog-a.jpg" alt="" width="300" height="300"
+          <img class="blog-image" src="/assets/LTS/assets/blog_a.jpg" alt="" width="300" height="300"
+            aria-hidden="true" />
+          <div class="blog_content">
+            <!-- <h6>ISARA Corporation</h6> -->
+            <h4>
+              Cybersecurity in the Age of Quantum Computing: A Cryptographer's Call to Action
+            </h4>
+            <p>
+              Computing power has advanced far beyond the invention of the transistor. Today's digital infrastructures
+              rely on public-key cryptography to safeguard commerce, state secrets and personal privacy. But a new
+              paradigm is within our view. Quantum computers utilize superposition and entanglement to perform
+              computations that are infeasible for classical machines.
+            </p>
+            <a class="isara-btn isara-btn-cta"
+              href="/blog-posts/cybersecurity-in-the-age-of-quantum-computing-a-cryptographer%E2%80%99s-call-to-action.html"
+              aria-expanded="false" aria-controls="why-quantum">
+              <span>Learn More</span>
+              <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+            </a>
+          </div>
+
+        </div>
+        <div class="blog_card">
+          <img class="blog-image" src="/assets/LTS/assets/blog-b.jpg" alt="" width="300" height="300"
             aria-hidden="true" />
           <div class="blog_content">
             <!-- <h6>ISARA Corporation</h6> -->
@@ -587,7 +615,7 @@
 
         </div>
         <div class="blog_card">
-          <img class="blog-image" src="/assets/LTS/assets/blog-b.png" alt="blog" width="300" height="300"
+          <img class="blog-image" src="/assets/LTS/assets/blog-c.png" alt="blog" width="300" height="300"
             aria-hidden="true" />
           <div class="blog_content">
             <!-- <h6>ISARA Corporation & Accenture Federal Services</h6> -->
@@ -606,23 +634,7 @@
             </a>
           </div>
         </div>
-        <div class="blog_card">
-          <img class="blog-image" src="/assets/LTS/assets/blog-c.jpeg" alt="" width="300" height="300"
-            aria-hidden="true" />
-          <div class="blog_content">
-            <!-- <h6>ISARA Corporation</h6> -->
-            <h4>The ABCs of Harvest and Decrypt</h4>
-            <p>
-              As large-scale quantum computing inches ever closer, the urgency to protect our digital assets now from
-              future threats is growing. Around the world, organizations of all kinds are being strongly encouraged…
-            </p>
-            <a href="/blog-posts/the-abcs-of-harvest-and-decrypt.html" class="isara-btn isara-btn-cta"
-              aria-expanded="false" aria-controls="why-quantum">
-              <span>Learn More</span>
-              <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
-            </a>
-          </div>
-        </div>
+
 
       </div>
       <a class="isara-btn isara-btn-danger" href="/blog-posts">

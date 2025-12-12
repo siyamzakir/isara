@@ -625,6 +625,10 @@ body {
    PRODUCTS SECTION
    ======================================== */
 .products {
+    background-image: url('/assets/LTS/assets/products_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: var(--ISARA-Black, #000);
 }
 

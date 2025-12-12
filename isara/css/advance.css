@@ -13,6 +13,8 @@
     --ISARA-Grey: #8E8C8D;
     --ISARA-Light-Grey: #ECECEC;
     --ISARA-Red: #EC1C24;
+    --ISARA-Blue: #002267;
+    --ISARA-Green: #09E765;
 }
 
 /* ========================================
@@ -85,6 +87,16 @@ body {
     letter-spacing: -0.42px;
     cursor: pointer;
 
+}
+
+.isara-btn-blue {
+    background-color: var(--ISARA-Blue);
+    color: #FFF !important;
+    transition: background-color 0.3s ease;
+}
+
+.isara-btn-blue:hover {
+    background-color: rgba(0, 34, 103, 0.75);
 }
 
 .isara-btn-danger {
@@ -265,6 +277,16 @@ body {
     border-radius: 4px;
 }
 
+.hero_square_green {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    transform: rotate(45deg);
+    background-color: var(--ISARA-Green);
+    border-radius: 4px;
+}
+
 .hero_feature_title {
     font-size: 15px;
     font-weight: 300;
@@ -298,6 +320,32 @@ body {
 
 
 /* ========================================
+   ADVANCE IMAGE SECTION
+   ======================================== */
+
+
+.advance_image_inner {
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.advance_image>figure {
+    max-width: 640px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+@media (min-width: 768px) {
+    .advance_image_inner {
+        margin-bottom: 80px;
+    }
+}
+
+/* ========================================
    PRODUCT SECTION
    ======================================== */
 
@@ -328,9 +376,8 @@ body {
 }
 
 .product_how_it_works {
-    margin-top: 80px;
-    max-width: 620px;
-
+    background-color: #F4F4F4;
+    padding: 40px 0px;
 }
 
 
@@ -372,7 +419,17 @@ body {
     color: var(--ISARA-Red, #EC1C24);
 }
 
+.product_head_blue {
+    border: 0.75px solid var(--ISARA-Blue);
+    color: var(--ISARA-Blue);
+}
+
+
 @media (min-width: 768px) {
+
+    .product_how_it_works {
+        margin-top: 80px;
+    }
 
     .product-row-reverse {
         flex-direction: row-reverse !important;
@@ -394,6 +451,12 @@ body {
         gap: 12px;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+
+    .product_how_it_works .product_content {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .product_head {
@@ -526,6 +589,11 @@ body {
         padding: 56px 40px;
         gap: 30px;
         margin-top: 0px;
+    }
+
+    .features_media img {
+        max-width: 292px;
+        max-height: 281px;
     }
 
     .features__actions {
@@ -733,6 +801,10 @@ body {
         max-width: 441px;
         padding: 40px 0;
         gap: 30px;
+    }
+
+    .industries_content>a {
+        width: fit-content;
     }
 
     .industries_cards {

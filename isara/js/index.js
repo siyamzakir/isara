@@ -1,5 +1,21 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function () {
+  const whyQuantumNowBtn = document.getElementById("why-quantum-now-btn");
+  const howItWorksSection = document.getElementById("how-we-solve-section");
+
+  if (whyQuantumNowBtn && howItWorksSection) {
+    whyQuantumNowBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      const offsetTop = howItWorksSection.offsetTop - 120;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    });
+  }
+});
+
 (function () {
   function initContinuousSliders() {
     var sliders = document.querySelectorAll(".customer-slider .slide-track");
