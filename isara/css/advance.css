@@ -1336,8 +1336,7 @@ body {
 }
 
 .modal-title {
-    font-family: "Roboto", sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     line-height: normal;
     color: var(--ISARA-Black, #000);
@@ -1349,6 +1348,7 @@ body {
     color: var(--ISARA-Dark-Grey, #5A5756);
     font-size: 16px;
     line-height: 24px;
+    font-weight: 300;
 }
 
 .modal-list {
@@ -1380,7 +1380,7 @@ body {
 .modal-requirements {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 }
 
 .modal-algorithm-section,
@@ -1391,7 +1391,6 @@ body {
 }
 
 .modal-section-title {
-    font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: normal;
@@ -1400,7 +1399,6 @@ body {
 }
 
 .modal-note {
-    margin-top: 24px;
     padding-top: 24px;
     border-top: 1px solid var(--ISARA-Light-Grey, #ECECEC);
     font-style: italic;
@@ -1413,23 +1411,23 @@ body {
     }
 
     .modal-content {
-        padding: 60px 50px;
+        padding: 40px;
     }
 
     .modal-title {
-        font-size: 36px;
-        margin-bottom: 32px;
+        font-size: 28px;
+        margin-bottom: 24px;
     }
 
     .modal-body {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .modal-list li {
         padding-left: 32px;
-        margin-bottom: 20px;
-        line-height: 28px;
+        margin-bottom: 8px;
+        line-height: 24px;
     }
 
     .modal-section-title {
