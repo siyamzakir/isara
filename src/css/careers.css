@@ -55,7 +55,7 @@
 
 /* Careers Main Content Section */
 .careers-content {
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     padding: 80px 140px;
     width: 100%;
     max-width: 1280px;
@@ -194,13 +194,10 @@
 
 /* Careers CTA Section */
 .careers-cta {
-    background-color: var(--ISARA-Black, #000);
     padding: 120px 200px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    position: relative;
-    overflow: hidden;
 }
 
 .careers-cta__bg {
@@ -238,7 +235,7 @@
     font-weight: 300;
     font-style: normal;
     line-height: normal;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     margin: 0;
     max-width: 684px;
@@ -249,7 +246,7 @@
     line-height: 25px;
     font-weight: 300;
     text-align: center;
-    color: #FFF;
+    color: #fff;
     margin: 0;
     max-width: 684px;
 }
@@ -407,4 +404,3 @@
         height: 304px;
     }
 }
-

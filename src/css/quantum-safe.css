@@ -72,7 +72,6 @@
 
 /* Definition Section */
 .quantum-definition {
-    background-color: #f7f7f7;
     display: flex;
     gap: 60px;
     align-items: center;
@@ -238,7 +237,7 @@
     font-size: 18px;
     font-style: italic;
     line-height: 25px;
-    color: var(--ISARA-Red, #EC1C24);
+    color: var(--ISARA-Red, #ec1c24);
     margin: 0;
 }
 
@@ -363,11 +362,10 @@
 
 /* Preparation Section */
 .quantum-preparation {
-    background-color: #000;
     display: flex;
     gap: 80px;
     align-items: center;
-    padding: 120px 100px 60px 100px;
+    padding: 120px 100px 120px 100px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -533,7 +531,6 @@
 
 /* CTA Section */
 .quantum-cta {
-    background-color: var(--ISARA-Black, #000);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -818,4 +815,3 @@
         max-width: 320px;
     }
 }
-

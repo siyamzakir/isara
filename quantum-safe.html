@@ -5,15 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What Quantum-Safe Cryptography Means for Long-Term Security - ISARA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
     <main class="site-main" id="main">
         <!-- Hero Section -->
-        <section class="quantum-hero">
-            <div class="quantum-hero__bg" aria-hidden="true"></div>
+        <section class="quantum-hero relative">
+            <figure class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <img src="/assets/LTS/assets/quantum-safe/hero_bg.png" alt="pattern" width="729" height="573" />
+            </figure>
             <div class="quantum-hero__content">
                 <h1 class="quantum-hero__title">
                     What Quantum-Safe Cryptography Means for Long-Term Security
@@ -36,32 +37,40 @@
         </section>
 
         <!-- Definition Section -->
-        <section class="quantum-definition">
-            <div class="quantum-definition__content">
-                <h2 class="quantum-definition__title">
-                    How Quantum-Safe Cryptography Is Defined
-                </h2>
-                <div class="quantum-definition__text">
-                    <p>Quantum-safe cryptography encompasses cryptographic algorithms and systems designed to remain
-                        secure even when adversaries have access to quantum computing capabilities. These methods are
-                        intended to replace or augment widely deployed public-key algorithms, such as RSA and ECC, which
-                        are vulnerable to quantum attacks.</p>
-                    <p>&nbsp;</p>
-                    <p>Often referred to as post-quantum cryptography, quantum-safe approaches rely on mathematical
-                        problems believed to resist both classical and quantum computation, helping organizations
-                        protect encrypted data, digital identities, and secure communications far into the future.</p>
+        <section class="bg-[#f7f7f7]">
+            <div class="quantum-definition">
+                <div class="quantum-definition__content">
+                    <h2 class="quantum-definition__title">
+                        How Quantum-Safe Cryptography Is Defined
+                    </h2>
+                    <div class="quantum-definition__text">
+                        <p>Quantum-safe cryptography encompasses cryptographic algorithms and systems designed to remain
+                            secure even when adversaries have access to quantum computing capabilities. These methods
+                            are
+                            intended to replace or augment widely deployed public-key algorithms, such as RSA and ECC,
+                            which
+                            are vulnerable to quantum attacks.</p>
+                        <p>&nbsp;</p>
+                        <p>Often referred to as post-quantum cryptography, quantum-safe approaches rely on mathematical
+                            problems believed to resist both classical and quantum computation, helping organizations
+                            protect encrypted data, digital identities, and secure communications far into the future.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="quantum-definition__image">
-                <img src="/assets/LTS/assets/quantum-safe/definition-image.png" alt="Quantum cryptography visualization"
-                    width="404" height="387" />
+                <div class="quantum-definition__image">
+                    <img src="/assets/LTS/assets/quantum-safe/hero.png" alt="Quantum cryptography visualization"
+                        width="404" height="387" />
+                </div>
+
             </div>
         </section>
 
         <!-- Current Risk Section -->
         <section class="quantum-risk">
-            <div class="quantum-risk__bg" aria-hidden="true"></div>
-            <ul class="quantum-risk__list">
+            <figure class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 ">
+                <img src="/assets/LTS/assets/secbg2.png" alt="pattern" width="400" height="403" />
+            </figure>
+            <ul class="quantum-risk__list relative">
                 <li class="quantum-risk__list-label">Key Drivers Include:</li>
                 <li class="quantum-risk__item">
                     <div class="quantum-risk__item-header">
@@ -97,7 +106,7 @@
                     </div>
                 </li>
             </ul>
-            <div class="quantum-risk__content">
+            <div class="quantum-risk__content relative">
                 <h3 class="quantum-risk__title">
                     Why Quantum Risk Is a Current Security Issue
                 </h3>
@@ -152,8 +161,8 @@
                     </div>
                 </div>
                 <div class="quantum-practice__image">
-                    <img src="/assets/LTS/assets/quantum-safe/practice-image.png" alt="Quantum-safe implementation"
-                        width="404" height="387" />
+                    <img src="/assets/LTS/assets/quantum-safe/quantum.png" alt="Quantum-safe implementation" width="404"
+                        height="387" />
                 </div>
             </div>
             <div class="quantum-practice__agility">
@@ -174,66 +183,56 @@
         </section>
 
         <!-- Preparation Section -->
-        <section class="quantum-preparation">
-            <div class="quantum-preparation__content">
-                <h3 class="quantum-preparation__title">
-                    How Organizations Begin Preparing
-                </h3>
-                <p class="quantum-preparation__text">
-                    Organizations preparing for quantum-safe security typically begin with a measured, risk-based
-                    approach that supports modernization without disrupting operations.
-                </p>
-                <a href="#" class="isara-btn isara-btn-cta-white">
-                    <span>Explore Quantum Readiness Approaches</span>
-                    <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11" aria-hidden="true" />
-                </a>
+        <section class="bg-black">
+            <div class="quantum-preparation">
+                <div class="quantum-preparation__content">
+                    <h3 class="quantum-preparation__title">
+                        How Organizations Begin Preparing
+                    </h3>
+                    <p class="quantum-preparation__text">
+                        Organizations preparing for quantum-safe security typically begin with a measured, risk-based
+                        approach that supports modernization without disrupting operations.
+                    </p>
+                    <a href="#" class="isara-btn isara-btn-cta text-white md:self-start ">
+                        <span>Explore Quantum Readiness Approaches</span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11" aria-hidden="true" />
+                    </a>
+                </div>
+                <ul class="quantum-preparation__list">
+                    <li class="quantum-preparation__item">
+                        <div class="quantum-preparation__item-header">
+                            <div class="shrink-0 w-4 h-4 bg-isara-red rounded-xs rotate-45"></div>
+                            <h5 class="quantum-preparation__item-title">
+                                Identify where cryptography is used across systems and environments
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="quantum-preparation__item">
+                        <div class="quantum-preparation__item-header">
+                            <div class="shrink-0 w-4 h-4 bg-isara-red rounded-xs rotate-45"></div>
+                            <h5 class="quantum-preparation__item-title">
+                                Assess exposure based on algorithm strength and data lifespan
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="quantum-preparation__item">
+                        <div class="quantum-preparation__item-header">
+                            <div class="shrink-0 w-4 h-4 bg-isara-red rounded-xs rotate-45"></div>
+                            <h5 class="quantum-preparation__item-title">
+                                Prioritize systems requiring long-term confidentiality
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="quantum-preparation__item">
+                        <div class="quantum-preparation__item-header">
+                            <div class="shrink-0 w-4 h-4 bg-isara-red rounded-xs rotate-45"></div>
+                            <h5 class="quantum-preparation__item-title">
+                                Plan phased adoption using hybrid and crypto-agile approaches
+                            </h5>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <ul class="quantum-preparation__list">
-                <li class="quantum-preparation__item">
-                    <div class="quantum-preparation__item-header">
-                        <div class="quantum-preparation__item-icon">
-                            <img src="/assets/LTS/assets/quantum-safe/ISARA Square Icon.svg" alt="" width="15.456"
-                                height="15.456" aria-hidden="true" />
-                        </div>
-                        <h5 class="quantum-preparation__item-title">
-                            Identify where cryptography is used across systems and environments
-                        </h5>
-                    </div>
-                </li>
-                <li class="quantum-preparation__item">
-                    <div class="quantum-preparation__item-header">
-                        <div class="quantum-preparation__item-icon">
-                            <img src="/assets/LTS/assets/quantum-safe/ISARA Square Icon.svg" alt="" width="15.456"
-                                height="15.456" aria-hidden="true" />
-                        </div>
-                        <h5 class="quantum-preparation__item-title">
-                            Assess exposure based on algorithm strength and data lifespan
-                        </h5>
-                    </div>
-                </li>
-                <li class="quantum-preparation__item">
-                    <div class="quantum-preparation__item-header">
-                        <div class="quantum-preparation__item-icon">
-                            <img src="/assets/LTS/assets/quantum-safe/ISARA Square Icon.svg" alt="" width="15.456"
-                                height="15.456" aria-hidden="true" />
-                        </div>
-                        <h5 class="quantum-preparation__item-title">
-                            Prioritize systems requiring long-term confidentiality
-                        </h5>
-                    </div>
-                </li>
-                <li class="quantum-preparation__item">
-                    <div class="quantum-preparation__item-header">
-                        <div class="quantum-preparation__item-icon">
-                            <img src="/assets/LTS/assets/quantum-safe/ISARA Square Icon.svg" alt="" width="15.456"
-                                height="15.456" aria-hidden="true" />
-                        </div>
-                        <h5 class="quantum-preparation__item-title">
-                            Plan phased adoption using hybrid and crypto-agile approaches
-                        </h5>
-                    </div>
-                </li>
-            </ul>
         </section>
 
         <!-- FAQ Section -->
@@ -275,20 +274,25 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="quantum-cta">
-            <div class="quantum-cta__bg" aria-hidden="true"></div>
-            <div class="quantum-cta__content">
-                <h3 class="quantum-cta__title">
-                    From Understanding to Application
-                </h3>
-                <p class="quantum-cta__text">
-                    Understanding quantum-safe cryptography is the first step. Applying it effectively depends on
-                    visibility, prioritization, and long-term planning aligned with real-world constraints.
-                </p>
-                <div class="quantum-cta__actions">
-                    <a href="#" class="isara-btn isara-btn-danger">
-                        Discuss Your Environment
-                    </a>
+        <section class="bg-black relative">
+            <figure class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="quantum-cta">
+                <div class="quantum-cta__bg" aria-hidden="true"></div>
+                <div class="quantum-cta__content">
+                    <h3 class="quantum-cta__title">
+                        From Understanding to Application
+                    </h3>
+                    <p class="quantum-cta__text">
+                        Understanding quantum-safe cryptography is the first step. Applying it effectively depends on
+                        visibility, prioritization, and long-term planning aligned with real-world constraints.
+                    </p>
+                    <div class="quantum-cta__actions">
+                        <a href="#" class="isara-btn isara-btn-danger">
+                            Discuss Your Environment
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
