@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+
+  /* ISARA Brand Colors */
+  --color-isara-dark-grey: #5a5756;
+  --color-isara-black: #000;
+  --color-isara-grey: #8e8c8d;
+  --color-isara-light-grey: #ececec;
+  --color-isara-red: #ec1c24;
+  --color-isara-blue: #002267;
+  --color-isara-green: #09E765;
+
+  /* Font Families */
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-family-roboto-mono: "Roboto Mono", monospace;
+
+  /* Legacy CSS variable mappings for backwards compatibility */
+  --ISARA-Dark-Grey: #5A5756;
+  --ISARA-Black: #000;
+  --ISARA-Grey: #8E8C8D;
+  --ISARA-Light-Grey: #ECECEC;
+  --ISARA-Red: #EC1C24;
+  --ISARA-Blue: #002267;
+  --ISARA-Green: #09E765;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply font-family-roboto bg-transparent text-base leading-normal text-inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    @apply h-auto;
+  }
+
+  svg:not(:root) {
+    @apply overflow-hidden;
+  }
+
+  pre,
+  code,
+  kbd,
+  samp {
+    font-family: SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New",
+      monospace;
+    font-size: 0.9em;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    @apply m-0;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  a {
+    text-decoration-skip-ink: auto;
+  }
+
+  hr {
+    @apply h-px border-0 opacity-[0.08];
+    background-color: currentColor;
+  }
+
+  ::selection {
+    background-color: rgba(179, 212, 252, 0.6);
+    color: inherit;
+  }
+
+  small {
+    @apply text-[80%];
+  }
+}
+
+@layer components {
+  .button:focus,
+  .button:active,
+  .button:focus-visible {
+    @apply outline-none;
+  }
+
+  /* Container utility - override Tailwind's default */
+  .container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1280px !important;
+    width: 100% !important;
+  }
+
+  /* Typography components */
+  .isara-h2 {
+    @apply font-light;
+    font-family: var(--font-family-roboto);
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .isara-h3 {
+    @apply font-light;
+    font-family: var(--font-family-roboto);
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .isara-p {
+    @apply font-light;
+    color: var(--ISARA-Dark-Grey, var(--color-isara-dark-grey));
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .isara-p-lg {
+    @apply font-light;
+    color: var(--ISARA-Dark-Grey, var(--color-isara-dark-grey));
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  /* Button components */
+  .isara-btn {
+    @apply flex cursor-pointer items-center justify-center gap-[10px] rounded-lg px-[18px] py-2;
+    font-family: var(--font-family-roboto-mono);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.42px;
+  }
+
+
+.isara-btn-blue {
+  @apply bg-isara-blue text-white transition-colors duration-300;
+}
+
+.isara-btn-blue:hover {
+  @apply bg-isara-blue/75;
+}
+
+  .isara-btn-danger {
+    @apply text-white transition-colors duration-300;
+    background-color: var(--ISARA-Red, var(--color-isara-red));
+  }
+
+  .isara-btn-danger:hover {
+    background-color: rgba(236, 28, 36, 0.75);
+  }
+
+  .isara-btn-cta {
+    @apply underline transition-transform duration-300;
+    color: var(--ISARA-Black, var(--color-isara-black));
+    text-decoration-skip-ink: auto;
+    text-underline-position: from-font;
+  }
+
+  .isara-btn-cta img {
+    @apply h-auto;
+    width: 13px;
+  }
+
+  .isara-btn-cta:hover {
+    @apply scale-[1.03];
+  }
+
+  .isara-btn-cta:hover img {
+    @apply -rotate-45 transition-transform duration-300;
+  }
+
+  @media (min-width: 768px) {
+    .isara-h2 {
+      font-size: 48px;
+      line-height: normal;
+    }
+
+    .isara-h3 {
+      font-size: 36px;
+      line-height: normal;
+    }
+
+    .isara-p-lg {
+      font-size: 18px;
+      line-height: normal;
+    }
+
+    .isara-btn-cta img {
+      @apply h-auto;
+      width: 16px;
+    }
+  }
+}
+
+/* Custom utility styles */
+@layer utilities {
+ 
+}
