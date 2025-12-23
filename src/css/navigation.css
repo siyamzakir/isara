@@ -1,20 +1,28 @@
-/* ========================================
-   HEADER / NAVIGATION
-   ======================================== */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
-    --ISARA-Dark-Grey: #5A5756;
+    --ISARA-Dark-Grey: #5a5756;
     --ISARA-Black: #000;
-    --ISARA-Grey: #8E8C8D;
-    --ISARA-Light-Grey: #ECECEC;
-    --ISARA-Red: #EC1C24;
-    --ISARA-White: #FFFFFF;
+    --ISARA-Grey: #8e8c8d;
+    --ISARA-Light-Grey: #ececec;
+    --ISARA-Red: #ec1c24;
+    --ISARA-White: #ffffff;
     --ISARA-Navbar-Height: 85px;
     --ISARA-Navbar-Height-SM: 85px;
 }
 
+/* ========================================
+   HEADER / NAVIGATION
+   ======================================== */
+
+.site-header {
+    font-family: "Roboto", sans-serif !important;
+    padding-top: var(--ISARA-Navbar-Height-SM) !important;
+}
+
 /* Buttons */
-.isara-btn-contact {
+.isara-btn-navigation {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -28,21 +36,14 @@
     line-height: normal !important;
     letter-spacing: -0.42px !important;
     cursor: pointer !important;
-    background-color: var(--ISARA-Red, #EC1C24) !important;
-    color: #FFF !important;
+    background-color: var(--ISARA-Red, #ec1c24) !important;
+    color: #fff !important;
     transition: background-color 0.3s ease !important;
-
 }
 
-.isara-btn-contact:hover {
+.isara-btn-navigation:hover {
     background-color: rgba(236, 28, 36, 0.75) !important;
 }
-
-.site-header {
-    padding-top: var(--ISARA-Navbar-Height-SM) !important;
-}
-
-
 
 .isara-navbar {
     position: fixed !important;
@@ -122,7 +123,6 @@
     font-size: 20px !important;
     border-radius: 4px !important;
 }
-
 
 /* ========================================
        MOBILE MENU TOGGLE BUTTON
@@ -405,7 +405,6 @@
         justify-content: flex-start !important;
         padding: 0 !important;
     }
-
 }
 
 /* ========================================
@@ -413,11 +412,111 @@
        ======================================== */
 .isara-nav-link:focus,
 .isara-dropdown-item:focus,
-.isara-btn-contact:focus,
+.isara-btn-navigation:focus,
 .isara-navbar__toggler:focus {
     outline: none !important;
 }
 
 .isara-nav-item.dropdown.show .isara-nav-link {
     color: var(--ISARA-Red) !important;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background-color: #000 !important;
+    color: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.footer_inner {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    padding: 40px 40px 40px 40px !important;
+    justify-content: start !important;
+    align-items: flex-start !important;
+    gap: 32px !important;
+}
+
+.footer-links-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 40px !important;
+}
+
+.footer_company {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+}
+
+.footer-social-links {
+    list-style: none !important;
+    list-style-type: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+
+.footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: fit-content !important;
+}
+
+.footer-links a {
+    text-decoration: none !important;
+}
+
+.footer-links h6 {
+    color: #fff !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+    margin-bottom: 8px !important;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.55) !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+}
+
+@media (min-width: 768px) {
+    .footer_inner {
+        flex-direction: row !important;
+        padding: 80px 64px 80px 64px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 96px !important;
+    }
+
+    .footer-social-links {
+        gap: 32px !important;
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+
+    .footer-links-container {
+        min-width: 40% !important;
+    }
 }
