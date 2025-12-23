@@ -10,9 +10,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 100px 200px;
-    gap: 32px;
-    height: 670px;
+    padding: 60px 30px;
+    gap: 24px;
+    min-height: 400px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -22,12 +22,12 @@
 
 .quantum-hero__bg {
     position: absolute;
-    width: 729px;
-    height: 573px;
+    width: 400px;
+    height: 400px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.15;
+    opacity: 0.1;
     overflow: hidden;
     pointer-events: none;
 }
@@ -36,16 +36,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
-    width: 744px;
+    gap: 24px;
+    width: 100%;
+    max-width: 100%;
     z-index: 1;
 }
 
 .quantum-hero__title {
     font-family: "Roboto", sans-serif;
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
     text-align: center;
     margin: 0;
@@ -53,30 +54,79 @@
 
 .quantum-hero__text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 24px;
     color: var(--ISARA-Black, #000);
     text-align: center;
-    width: 612px;
+    width: 100%;
+    max-width: 100%;
     margin: 0;
 }
 
 .quantum-hero__actions {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.quantum-hero__actions .isara-btn {
+    width: 100%;
+    max-width: 280px;
+}
+
+@media (min-width: 768px) {
+    .quantum-hero {
+        padding: 100px 200px;
+        gap: 32px;
+        min-height: 670px;
+    }
+
+    .quantum-hero__bg {
+        width: 729px;
+        height: 573px;
+        opacity: 0.15;
+    }
+
+    .quantum-hero__content {
+        gap: 32px;
+        max-width: 744px;
+    }
+
+    .quantum-hero__title {
+        font-size: 48px;
+        line-height: normal;
+    }
+
+    .quantum-hero__text {
+        font-size: 18px;
+        max-width: 612px;
+    }
+
+    .quantum-hero__actions {
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+    }
+
+    .quantum-hero__actions .isara-btn {
+        width: auto;
+        max-width: none;
+    }
 }
 
 /* Definition Section */
 .quantum-definition {
     display: flex;
-    gap: 60px;
+    flex-direction: column-reverse;
+    gap: 32px;
     align-items: center;
     justify-content: center;
-    padding: 80px 140px;
+    padding: 40px 30px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -85,24 +135,25 @@
 .quantum-definition__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     flex: 1;
+    width: 100%;
 }
 
 .quantum-definition__title {
     font-family: "Roboto", sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
     margin: 0;
 }
 
 .quantum-definition__text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 24px;
     color: #000;
 }
 
@@ -111,26 +162,60 @@
 }
 
 .quantum-definition__image {
-    width: 404px;
-    height: 387px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     flex-shrink: 0;
 }
 
 .quantum-definition__image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+    .quantum-definition {
+        flex-direction: row;
+        gap: 60px;
+        padding: 80px 140px;
+    }
+
+    .quantum-definition__content {
+        gap: 20px;
+    }
+
+    .quantum-definition__title {
+        font-size: 36px;
+        line-height: normal;
+    }
+
+    .quantum-definition__text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .quantum-definition__image {
+        width: 404px;
+        max-width: 404px;
+        height: 387px;
+    }
+
+    .quantum-definition__image img {
+        height: 100%;
+    }
 }
 
 /* Current Risk Section */
 .quantum-risk {
     background-color: rgba(244, 244, 244, 0);
     display: flex;
-    gap: 80px;
-    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
     justify-content: center;
-    padding: 60px 140px;
+    padding: 40px 30px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -140,28 +225,30 @@
 
 .quantum-risk__bg {
     position: absolute;
-    width: 400px;
-    height: 403px;
+    width: 300px;
+    height: 300px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
     pointer-events: none;
+    opacity: 0.5;
 }
 
 .quantum-risk__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     flex: 1;
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .quantum-risk__list-label {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     color: var(--ISARA-Black, #000);
@@ -171,7 +258,7 @@
     background-color: #fff;
     border: 1px solid #ececec;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
     box-shadow: 2px 5px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -185,21 +272,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 21.858px;
-    height: 21.858px;
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
 }
 
 .quantum-risk__item-icon img {
-    width: 15.456px;
-    height: 15.456px;
+    width: 13px;
+    height: 13px;
 }
 
 .quantum-risk__item-title {
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.3;
     color: var(--ISARA-Black, #000);
     text-transform: uppercase;
     margin: 0;
@@ -209,23 +296,24 @@
 .quantum-risk__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     flex: 1;
-    padding-bottom: 40px;
+    padding-bottom: 0;
+    width: 100%;
 }
 
 .quantum-risk__title {
     font-family: "Roboto", sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
     margin: 0;
 }
 
 .quantum-risk__text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 24px;
     color: #000;
@@ -234,19 +322,79 @@
 
 .quantum-risk__highlight {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
-    line-height: 25px;
+    line-height: 24px;
     color: var(--ISARA-Red, #ec1c24);
     margin: 0;
+}
+
+@media (min-width: 768px) {
+    .quantum-risk {
+        flex-direction: row;
+        gap: 80px;
+        padding: 60px 140px;
+    }
+
+    .quantum-risk__bg {
+        width: 400px;
+        height: 403px;
+        opacity: 1;
+    }
+
+    .quantum-risk__list {
+        gap: 16px;
+    }
+
+    .quantum-risk__list-label {
+        font-size: 18px;
+    }
+
+    .quantum-risk__item {
+        padding: 24px;
+    }
+
+    .quantum-risk__item-icon {
+        width: 21.858px;
+        height: 21.858px;
+    }
+
+    .quantum-risk__item-icon img {
+        width: 15.456px;
+        height: 15.456px;
+    }
+
+    .quantum-risk__item-title {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .quantum-risk__content {
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    .quantum-risk__title {
+        font-size: 36px;
+        line-height: normal;
+    }
+
+    .quantum-risk__text {
+        font-size: 18px;
+    }
+
+    .quantum-risk__highlight {
+        font-size: 18px;
+        line-height: 25px;
+    }
 }
 
 /* Practice Section */
 .quantum-practice {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    padding: 80px 160px;
+    gap: 32px;
+    padding: 40px 30px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -255,35 +403,36 @@
 .quantum-practice__header {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     align-items: center;
 }
 
 .quantum-practice__main-title {
     font-family: "Roboto", sans-serif;
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
     text-align: center;
-    width: 822px;
+    width: 100%;
     margin: 0;
 }
 
 .quantum-practice__main-text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 24px;
     color: #000;
     text-align: center;
-    width: 822px;
+    width: 100%;
     margin: 0;
 }
 
 .quantum-practice__content {
     display: flex;
-    gap: 60px;
+    flex-direction: column-reverse;
+    gap: 32px;
     align-items: center;
     justify-content: center;
 }
@@ -292,42 +441,43 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 496px;
+    width: 100%;
 }
 
 .quantum-practice__section {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 12px;
 }
 
 .quantum-practice__title {
     font-family: "Roboto", sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
     margin: 0;
 }
 
 .quantum-practice__text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 24px;
     color: #000;
     margin: 0;
 }
 
 .quantum-practice__image {
-    width: 404px;
-    height: 387px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     flex-shrink: 0;
 }
 
 .quantum-practice__image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -335,24 +485,24 @@
 .quantum-practice__agility {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .quantum-practice__agility-title {
     font-family: "Roboto", sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
-    width: 822px;
+    width: 100%;
     margin: 0;
 }
 
 .quantum-practice__agility-text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 24px;
     color: #000;
 }
 
@@ -360,12 +510,84 @@
     margin: 0;
 }
 
+@media (min-width: 768px) {
+    .quantum-practice {
+        gap: 50px;
+        padding: 80px 160px;
+    }
+
+    .quantum-practice__header {
+        gap: 20px;
+    }
+
+    .quantum-practice__main-title {
+        font-size: 48px;
+        line-height: normal;
+        max-width: 822px;
+    }
+
+    .quantum-practice__main-text {
+        font-size: 18px;
+        line-height: 25px;
+        max-width: 822px;
+    }
+
+    .quantum-practice__content {
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    .quantum-practice__text-content {
+        width: 496px;
+    }
+
+    .quantum-practice__section {
+        gap: 13px;
+    }
+
+    .quantum-practice__title {
+        font-size: 36px;
+        line-height: normal;
+    }
+
+    .quantum-practice__text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .quantum-practice__image {
+        width: 404px;
+        max-width: 404px;
+        height: 387px;
+    }
+
+    .quantum-practice__image img {
+        height: 100%;
+    }
+
+    .quantum-practice__agility {
+        gap: 20px;
+    }
+
+    .quantum-practice__agility-title {
+        font-size: 36px;
+        line-height: normal;
+        max-width: 822px;
+    }
+
+    .quantum-practice__agility-text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
 /* Preparation Section */
 .quantum-preparation {
     display: flex;
-    gap: 80px;
+    flex-direction: column;
+    gap: 32px;
     align-items: center;
-    padding: 120px 100px 120px 100px;
+    padding: 60px 30px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -376,22 +598,22 @@
 .quantum-preparation__content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 441px;
+    gap: 20px;
+    width: 100%;
 }
 
 .quantum-preparation__title {
     font-family: "Roboto", sans-serif;
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: #fff;
     margin: 0;
 }
 
 .quantum-preparation__text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 24px;
     color: #fff;
@@ -405,14 +627,14 @@
     gap: 10px;
     padding: 20px 10px;
     border-radius: 20px;
-    width: 558px;
+    width: 100%;
     list-style: none;
     margin: 0;
 }
 
 .quantum-preparation__item {
     background-color: #fff;
-    padding: 24px;
+    padding: 20px;
     border-radius: 16px;
 }
 
@@ -426,24 +648,69 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 21.858px;
-    height: 21.858px;
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
 }
 
 .quantum-preparation__item-icon img {
-    width: 15.456px;
-    height: 15.456px;
+    width: 13px;
+    height: 13px;
 }
 
 .quantum-preparation__item-title {
     font-family: "Roboto", sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.3;
     color: var(--ISARA-Black, #000);
     margin: 0;
     flex: 1;
+}
+
+@media (min-width: 768px) {
+    .quantum-preparation {
+        flex-direction: row;
+        gap: 80px;
+        padding: 120px 100px;
+    }
+
+    .quantum-preparation__content {
+        gap: 30px;
+        width: 441px;
+    }
+
+    .quantum-preparation__title {
+        font-size: 48px;
+        line-height: normal;
+    }
+
+    .quantum-preparation__text {
+        font-size: 18px;
+    }
+
+    .quantum-preparation__list {
+        width: 558px;
+    }
+
+    .quantum-preparation__item {
+        padding: 24px;
+    }
+
+    .quantum-preparation__item-icon {
+        width: 21.858px;
+        height: 21.858px;
+    }
+
+    .quantum-preparation__item-icon img {
+        width: 15.456px;
+        height: 15.456px;
+    }
+
+    .quantum-preparation__item-title {
+        font-size: 24px;
+        line-height: normal;
+    }
 }
 
 /* FAQ Section */
@@ -452,7 +719,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 140px;
+    padding: 40px 30px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -462,19 +729,20 @@
 
 .quantum-faq__bg {
     position: absolute;
-    width: 400px;
-    height: 403px;
+    width: 300px;
+    height: 300px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
     pointer-events: none;
+    opacity: 0.5;
 }
 
 .quantum-faq__content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
     flex: 1;
     z-index: 1;
@@ -482,9 +750,9 @@
 
 .quantum-faq__title {
     font-family: "Roboto", sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: var(--ISARA-Black, #000);
     text-align: center;
     margin: 0;
@@ -493,7 +761,7 @@
 .quantum-faq__list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     width: 100%;
 }
 
@@ -501,18 +769,19 @@
     background-color: #fff;
     border: 1px solid #ececec;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
     box-shadow: 2px 5px 8px 0px rgba(0, 0, 0, 0.1);
     display: flex;
-    gap: 20px;
-    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
 }
 
 .quantum-faq__question {
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.3;
     color: var(--ISARA-Black, #000);
     text-transform: uppercase;
     margin: 0;
@@ -521,12 +790,54 @@
 
 .quantum-faq__answer {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 24px;
     color: #000;
-    width: 545px;
+    width: 100%;
     margin: 0;
+}
+
+@media (min-width: 768px) {
+    .quantum-faq {
+        padding: 60px 140px;
+    }
+
+    .quantum-faq__bg {
+        width: 400px;
+        height: 403px;
+        opacity: 1;
+    }
+
+    .quantum-faq__content {
+        gap: 16px;
+    }
+
+    .quantum-faq__title {
+        font-size: 36px;
+        line-height: normal;
+    }
+
+    .quantum-faq__list {
+        gap: 16px;
+    }
+
+    .quantum-faq__item {
+        flex-direction: row;
+        gap: 20px;
+        padding: 24px;
+        align-items: center;
+    }
+
+    .quantum-faq__question {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .quantum-faq__answer {
+        font-size: 18px;
+        width: 545px;
+    }
 }
 
 /* CTA Section */
@@ -535,8 +846,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 120px 200px;
-    gap: 32px;
+    padding: 60px 30px;
+    gap: 24px;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -546,28 +857,29 @@
 
 .quantum-cta__bg {
     position: absolute;
-    width: 465px;
-    height: 472px;
+    width: 300px;
+    height: 300px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    opacity: 0.3;
 }
 
 .quantum-cta__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
-    width: 684px;
+    gap: 24px;
+    width: 100%;
     z-index: 1;
 }
 
 .quantum-cta__title {
     font-family: "Roboto", sans-serif;
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.2;
     color: #fff;
     text-align: center;
     margin: 0;
@@ -575,9 +887,9 @@
 
 .quantum-cta__text {
     font-family: "Akkurat LL", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 24px;
     color: #fff;
     text-align: center;
     margin: 0;
@@ -585,233 +897,53 @@
 
 .quantum-cta__actions {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
-/* ========================================
-      RESPONSIVE STYLES
-      ======================================== */
+.quantum-cta__actions .isara-btn {
+    width: 100%;
+    max-width: 280px;
+}
 
-@media (max-width: 1024px) {
-    .quantum-hero {
-        padding: 80px 60px;
-        height: auto;
-    }
-
-    .quantum-hero__content {
-        width: 100%;
-    }
-
-    .quantum-hero__title {
-        font-size: 36px;
-    }
-
-    .quantum-hero__text {
-        width: 100%;
-    }
-
-    .quantum-definition {
-        flex-direction: column;
-        padding: 60px 40px;
-    }
-
-    .quantum-definition__image {
-        width: 100%;
-        height: auto;
-    }
-
-    .quantum-risk {
-        flex-direction: column;
-        padding: 60px 40px;
-    }
-
-    .quantum-practice {
-        padding: 60px 40px;
-    }
-
-    .quantum-practice__main-title,
-    .quantum-practice__main-text {
-        width: 100%;
-    }
-
-    .quantum-practice__content {
-        flex-direction: column;
-    }
-
-    .quantum-practice__text-content {
-        width: 100%;
-    }
-
-    .quantum-practice__image {
-        width: 100%;
-        height: auto;
-    }
-
-    .quantum-practice__agility-title {
-        width: 100%;
-    }
-
-    .quantum-preparation {
-        flex-direction: column;
-        padding: 80px 40px;
-    }
-
-    .quantum-preparation__content {
-        width: 100%;
-    }
-
-    .quantum-preparation__list {
-        width: 100%;
-    }
-
-    .quantum-faq {
-        padding: 60px 40px;
-    }
-
+@media (min-width: 768px) {
     .quantum-cta {
-        padding: 80px 40px;
+        padding: 120px 200px;
+        gap: 32px;
+    }
+
+    .quantum-cta__bg {
+        width: 465px;
+        height: 472px;
+        opacity: 1;
     }
 
     .quantum-cta__content {
-        width: 100%;
+        gap: 32px;
+        max-width: 684px;
     }
 
     .quantum-cta__title {
-        font-size: 36px;
-    }
-}
-
-@media (max-width: 768px) {
-    .quantum-hero {
-        padding: 60px 20px;
-    }
-
-    .quantum-hero__title {
-        font-size: 28px;
-    }
-
-    .quantum-hero__text {
-        font-size: 16px;
-    }
-
-    .quantum-hero__actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .quantum-hero__actions .isara-btn {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .quantum-definition {
-        padding: 40px 20px;
-    }
-
-    .quantum-definition__title {
-        font-size: 28px;
-    }
-
-    .quantum-definition__text {
-        font-size: 16px;
-    }
-
-    .quantum-risk {
-        padding: 40px 20px;
-    }
-
-    .quantum-risk__title {
-        font-size: 28px;
-    }
-
-    .quantum-risk__text,
-    .quantum-risk__highlight {
-        font-size: 16px;
-    }
-
-    .quantum-practice {
-        padding: 40px 20px;
-    }
-
-    .quantum-practice__main-title {
-        font-size: 28px;
-    }
-
-    .quantum-practice__main-text {
-        font-size: 16px;
-    }
-
-    .quantum-practice__title {
-        font-size: 24px;
-    }
-
-    .quantum-practice__text {
-        font-size: 16px;
-    }
-
-    .quantum-practice__agility-title {
-        font-size: 28px;
-    }
-
-    .quantum-practice__agility-text {
-        font-size: 16px;
-    }
-
-    .quantum-preparation {
-        padding: 60px 20px;
-    }
-
-    .quantum-preparation__title {
-        font-size: 32px;
-    }
-
-    .quantum-preparation__text {
-        font-size: 16px;
-    }
-
-    .quantum-preparation__item-title {
-        font-size: 18px;
-    }
-
-    .quantum-faq {
-        padding: 40px 20px;
-    }
-
-    .quantum-faq__title {
-        font-size: 28px;
-    }
-
-    .quantum-faq__item {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .quantum-faq__question {
-        font-size: 16px;
-    }
-
-    .quantum-faq__answer {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .quantum-cta {
-        padding: 60px 20px;
-    }
-
-    .quantum-cta__title {
-        font-size: 28px;
+        font-size: 48px;
+        line-height: normal;
     }
 
     .quantum-cta__text {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .quantum-cta__actions {
+        flex-direction: row;
+        width: auto;
     }
 
     .quantum-cta__actions .isara-btn {
-        width: 100%;
-        max-width: 320px;
+        width: auto;
+        max-width: none;
     }
 }
+

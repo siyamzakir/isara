@@ -16,6 +16,7 @@ export default defineConfig({
         resources: resolve(__dirname, "resources.html"),
         quantumSafe: resolve(__dirname, "quantum-safe.html"),
         contact: resolve(__dirname, "contact.html"),
+        solutions: resolve(__dirname, "solutions.html"),
       },
     },
   },
