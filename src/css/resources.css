@@ -239,21 +239,17 @@
 .resources-cards__grid {
     width: 100%;
     padding: 0 40px;
-}
-
-.resources-cards__row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.resources-cards__row:last-child {
-    margin-bottom: 0;
+    justify-content: center;
 }
 
 .resources-cards__card {
+    max-width: 320px;
+    min-width: 320px;
+    max-height: 314px;
+    min-height: 314px;
     background: white;
     border: 2px solid #ececec;
     border-radius: 30px;
