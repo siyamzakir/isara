@@ -19,6 +19,7 @@ export default defineConfig({
         solutions: resolve(__dirname, "solutions.html"),
         navigation: resolve(__dirname, "navigation.html"),
         blog: resolve(__dirname, "blog.html"),
+        microsoftAzure: resolve(__dirname, "microsoft-azure.html"),
       },
         },
     },
