@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pre-Footer CTA | ISARA</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400&display=swap");
+
+        /* ── Full-bleed: scoped to this page only via body class ── */
+        body.pf-page {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ── Scoped entirely under .pf-root — no global leakage ── */
+
+        .pf-root {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pf-root *, .pf-root *::before, .pf-root *::after {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Container ── */
+        .pf-root .container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1280px;
+            width: 100%;
+        }
+
+        /* ── Typography ── */
+        .pf-root .isara-h2 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 36px;
+            line-height: normal;
+            margin: 0;
+        }
+
+        .pf-root .isara-p-lg {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: normal;
+            margin: 0;
+        }
+
+        /* ── Buttons ── */
+        .pf-root .isara-btn {
+            display: inline-flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 8px;
+            padding: 8px 18px;
+            font-family: "Roboto Mono", monospace;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.42px;
+            text-decoration: none;
+            border: none;
+            background: none;
+        }
+
+        .pf-root .isara-btn-danger {
+            background-color: #ec1c24;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .pf-root .isara-btn-danger:hover {
+            background-color: rgba(236, 28, 36, 0.75);
+        }
+
+        .pf-root .isara-btn-cta {
+            color: #fff;
+            text-decoration: underline;
+            text-decoration-skip-ink: auto;
+            text-underline-position: from-font;
+            transition: transform 0.3s ease;
+        }
+
+        .pf-root .isara-btn-cta img {
+            height: auto;
+            width: 13px;
+        }
+
+        .pf-root .isara-btn-cta:hover {
+            transform: scale(1.03);
+        }
+
+        .pf-root .isara-btn-cta:hover img {
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+        }
+
+        /* ── Hero Actions ── */
+        .pf-root .hero__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        /* ── CTA Section ── */
+        .pf-root .cta {
+            position: relative;
+            background-color: #000;
+        }
+
+        .pf-root .cta_inner {
+            position: relative;
+            display: flex;
+            padding: 40px 30px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .pf-root .cta_inner h2 {
+            color: #fff;
+        }
+
+        .pf-root .cta_inner p {
+            color: #ececec;
+        }
+
+        .pf-root .cta_inner .hero__actions {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .pf-root .cta__bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 100%;
+            overflow: hidden;
+            display: flex;
+            pointer-events: none;
+        }
+
+        .pf-root .cta__bg img {
+            width: 465px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* ── Responsive ── */
+        @media (min-width: 768px) {
+            .pf-root .isara-h2 {
+                font-size: 48px;
+            }
+
+            .pf-root .isara-btn-cta img {
+                width: 16px;
+            }
+
+            .pf-root .hero__actions {
+                flex-direction: row;
+                align-items: center;
+                gap: 22px;
+                margin-top: 40px;
+                width: auto;
+            }
+
+            .pf-root .cta_inner {
+                padding: 120px 200px;
+                gap: 32px;
+            }
+
+            .pf-root .cta_inner .hero__actions {
+                flex-direction: row;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="pf-page">
+    <main id="main" class="pf-root">
+        <section class="cta">
+            <figure class="cta__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
+            </figure>
+            <div class="container cta_inner">
+                <h2 class="isara-h2">
+                    Bridge Legacy Cryptography to a Standards-Aligned Future
+                </h2>
+                <p class="isara-p-lg">
+                    We'll help your team identify cryptographic risk and implement quantum-safe upgrades that meet
+                    emerging compliance requirements.
+                </p>
+                <div class="hero__actions">
+                    <a href="/solutions/" class="isara-btn isara-btn-danger">
+                        Explore Platform Capabilities
+                    </a>
+                    <a href="/company/contact-us.html" class="isara-btn isara-btn-cta">
+                        <span>Speak with a Cryptographic Strategy Expert</span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
