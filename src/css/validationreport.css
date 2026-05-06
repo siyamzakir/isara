@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+:root {
+    --validation-red: #ec1c24;
+    --validation-black: #000;
+    --validation-white: #fff;
+    --validation-light-grey: #ececec;
+    --validation-dark-grey: #5a5756;
+    --validation-font-body: "Akkurat LL", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --validation-font-display: "Roboto", var(--validation-font-body);
+    --validation-card-radius: 12px;
+    --validation-card-pad: clamp(28px, 4.5vw, 40px);
+}
+
+/* Box model only inside this block — avoids touching MODX/footer layout when embedded */
+.validation-report,
+.validation-report *,
+.validation-report *::before,
+.validation-report *::after {
+    box-sizing: border-box;
+}
+
+/**
+ * Standalone document only (live-validation-report.html). No site footer — hero only.
+ * When embedding in MODX, paste `<main class="validation-report">…</main>` only; use a template without footer for this resource.
+ */
+html.validation-report-standalone {
+    height: 100%;
+}
+
+body.validation-report-standalone {
+    margin: 0;
+    min-height: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: var(--validation-black);
+    font-family: var(--validation-font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--validation-black);
+    -webkit-font-smoothing: antialiased;
+}
+
+.validation-report {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.validation-report__hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1;
+    min-height: min(100vh, 960px);
+    min-height: min(100dvh, 960px);
+    overflow: hidden;
+}
+
+.validation-report__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.validation-report__bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.35) 45%,
+        rgba(0, 0, 0, 0.55) 100%
+    );
+    z-index: 0;
+}
+
+.validation-report__bg img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    opacity: 0.62;
+    z-index: 1;
+}
+
+.validation-report__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 88px) clamp(24px, 5vw, 64px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(40px, 5vw, 56px);
+    align-content: center;
+    align-items: center;
+}
+
+.validation-report__copy {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 28px);
+    max-width: 38rem;
+    align-self: center;
+}
+
+.validation-report__title {
+    margin: 0;
+    font-family: var(--validation-font-display);
+    font-weight: 300;
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--validation-white);
+}
+
+.validation-report__lead {
+    margin: 0;
+    font-family: var(--validation-font-display);
+    font-weight: 300;
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.validation-report__chip {
+    margin: 0;
+    align-self: flex-start;
+    padding: 8px 10px;
+    border: 1px solid var(--validation-red);
+    border-radius: 4px;
+    font-family: var(--validation-font-display);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+    text-transform: uppercase;
+    color: var(--validation-white);
+}
+
+.validation-report__form-panel {
+    background: var(--validation-white);
+    border: 1px solid var(--validation-light-grey);
+    border-radius: var(--validation-card-radius);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: var(--validation-card-pad) var(--validation-card-pad) 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 2.5vw, 20px);
+    min-height: 0;
+    align-self: center;
+}
+
+.validation-report__form-title {
+    margin: 0;
+    font-family: var(--validation-font-display);
+    font-weight: 500;
+    font-size: clamp(21px, 2vw, 21px);
+    line-height: 1.35;
+    text-align: left;
+    color: var(--validation-black);
+}
+
+.validation-report__accent {
+    color: var(--validation-red);
+}
+
+.validation-report__embed {
+    flex: 0 1 auto;
+    min-height: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.validation-report__embed .hs-form-frame {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.validation-report__embed iframe {
+    width: 100% !important;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* When HubSpot renders inline (non-iframe), align with Figma: ISARA red CTA, left, squared fields */
+.validation-report__embed .hs-form {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.validation-report__embed .hs-form .hs-fieldtype-text label,
+.validation-report__embed .hs-form .hs-fieldtype-textarea label,
+.validation-report__embed .hs-form .hs-fieldtype-select label {
+    font-family: var(--validation-font-display);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--validation-black);
+}
+
+.validation-report__embed .hs-form input[type="text"],
+.validation-report__embed .hs-form input[type="email"],
+.validation-report__embed .hs-form textarea,
+.validation-report__embed .hs-form select {
+    border-radius: 6px;
+    border: 1px solid #d0d0d0;
+    font-family: var(--validation-font-display);
+}
+
+.validation-report__embed .hs-form .hs-button,
+.validation-report__embed .hs-form input[type="submit"] {
+    background: var(--validation-red) !important;
+    border: none !important;
+    border-radius: 4px !important;
+    color: var(--validation-white) !important;
+    font-family: var(--validation-font-display) !important;
+    font-weight: 500 !important;
+    padding: 12px 24px !important;
+    width: auto !important;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    cursor: pointer;
+}
+
+.validation-report__embed .hs-form .hs-button:hover,
+.validation-report__embed .hs-form input[type="submit"]:hover {
+    filter: brightness(1.05);
+}
+
+@media (max-width: 960px) {
+    .validation-report__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .validation-report__copy {
+        max-width: none;
+    }
+
+    .validation-report__hero {
+        min-height: auto;
+        padding-bottom: clamp(24px, 6vw, 48px);
+    }
+}

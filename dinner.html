@@ -4,304 +4,202 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISARA</title>
+    <title>ISARA Executive Dinner</title>
+    <link rel="stylesheet" href="/src/css/dinner.css" />
 </head>
 
 <body>
 
     <main class="site-main" id="main">
-        <section class="container hero__inner" aria-labelledby="hero-heading">
-            <div class="hero_content">
-                <h2 class="isara-h2">
-                    Join an Executive Dinner on Cryptographic Risk & Quantum Readiness
-                </h2>
-                <p class="isara-p-lg">
-                    Integrate NIST aligned PQC algorithms for embedded, hybrid, and enterprise systems.
-                </p>
-                <div class="hero__actions">
-                    <a href="/company/contact-us.html" class="isara-btn isara-btn-danger">
-                        Book Your ISARA Radiate Demo
-                    </a>
-                    <button class="isara-btn isara-btn-cta" type="button" aria-expanded="false"
-                        aria-controls="why-quantum">
-                        <span>See How It Works</span>
-                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
-                    </button>
-                </div>
 
+        <!-- ══ HERO ══════════════════════════════════════════════════ -->
+        <section class="dinner-hero" aria-labelledby="hero-heading">
+            <div class="dinner-hero__content">
+                <div class="dinner-hero__text-group">
+                    <span class="dinner-chip">Executive Roundtable Dinners</span>
+                    <h1 class="dinner-hero__title" id="hero-heading">
+                        The People Actually Responsible for PQC Migration, In One Room
+                    </h1>
+                    <p class="dinner-hero__body">
+                        No slides. No vendor demos. A structured conversation with CISOs, Federal CIOs, and
+                        infrastructure architects on crypto agility, algorithm governance, and what a realistic PQC
+                        migration timeline actually looks like in production.
+                    </p>
+                </div>
+                <p class="dinner-hero__note">
+                    Attendance is limited and vetted. Apply for your spot.
+                </p>
+                <div class="dinner-hero__actions">
+                    <a href="/company/contact-us.html" class="dinner-hero__btn dinner-hero__btn--primary">
+                        Reserve Your Seat
+                    </a>
+                    <a href="#who-attends" class="dinner-hero__btn dinner-hero__btn--secondary">
+                        <span>See Who Attends</span>
+                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+                    </a>
+                </div>
             </div>
-            <figure class="hero__image" aria-hidden="true">
-                <img src="/assets/LTS/assets/dinner_hero.png" alt="hero" width="469" height="387" />
+            <figure class="dinner-hero__image" aria-hidden="true">
+                <img src="/assets/LTS/assets/dinner_hero.png" alt="Security executives attending a private ISARA-hosted CISO dinner discussion." width="469" height="387" />
             </figure>
         </section>
 
-        <section class="why_attend container why_attend_inner">
-            <h2 class="isara-h2">
-                Why CISOs Attend</h2>
-            <div class="why_attend_cards">
-                <div class="why_attend_card">
-                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
-                    <h4 class="why_attend_card_title">
-                        Strategic Guidance
-                    </h4>
-                    <p class="why_attend_card_desc">
-                        Real-world perspectives on cryptographic risk, algorithm governance, hybrid migration, and PQC
-                        readiness.
-                    </p>
+        <!-- ══ SUPPORT / WHY ATTEND ═══════════════════════════════════ -->
+        <section class="dinner-support" aria-label="Why attend">
+            <div class="container dinner-support__inner">
+                <div class="dinner-support__card">
+                    <img src="/assets/LTS/assets/dinner/discovery 2.png" alt="" width="55" height="58" />
+                    <div class="dinner-support__card-text">
+                        <p class="dinner-support__card-title">Strategic Guidance</p>
+                        <p class="dinner-support__card-desc">
+                            Real-world perspectives on cryptographic risk, algorithm governance, hybrid migration, and
+                            PQC readiness.
+                        </p>
+                    </div>
                 </div>
-                <div class="why_attend_card">
-                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
-                    <h4 class="why_attend_card_title">
-                        Peer-Level Insights
-                    </h4>
-                    <p class="why_attend_card_desc">
-                        Candid discussion with leaders across government, financial services, and critical
-                        infrastructure.
-                    </p>
+                <div class="dinner-support__card">
+                    <img src="/assets/LTS/assets/dinner/discovery 2.png" alt="" width="55" height="58" />
+                    <div class="dinner-support__card-text">
+                        <p class="dinner-support__card-title">Peer-Level Insights</p>
+                        <p class="dinner-support__card-desc">
+                            Candid discussion with leaders across government, financial services, and critical
+                            infrastructure.
+                        </p>
+                    </div>
                 </div>
-                <div class="why_attend_card">
-                    <img src="/assets/LTS/assets/product/isara.svg" alt="isara" width="55" height="58" />
-                    <h4 class="why_attend_card_title">
-                        Actionable Outcomes
-                    </h4>
-                    <p class="why_attend_card_desc">
-                        Leave with clarity on crypto posture management, roadmap priorities, and how to prepare for
-                        quantum-era threats.
-                    </p>
+                <div class="dinner-support__card">
+                    <img src="/assets/LTS/assets/dinner/discovery 2.png" alt="" width="55" height="58" />
+                    <div class="dinner-support__card-text">
+                        <p class="dinner-support__card-title">Actionable Outcomes</p>
+                        <p class="dinner-support__card-desc">
+                            Leave with clarity on crypto posture management, roadmap priorities, and how to prepare for
+                            quantum-era threats.
+                        </p>
+                    </div>
                 </div>
-
-
             </div>
-
         </section>
 
-        <section id="request-invitation" class="upcoming container upcoming_inner">
-            <h2 class="isara-h2">
-                Upcoming Executive Dinner Events</h2>
-            <div class="upcoming_cards">
-                <div class="upcoming_card">
-                    <h4 class="upcoming_card_title">
-                        Cyber security round table in Scottsdale
-                    </h4>
-                    <span class="upcoming_card_location">
-                        Scottsdale, Arizona
-                    </span>
-                    <p class="upcoming_card_desc">
-                        <b>Venue:</b> Ocean 44 Premier Fine Dining Seafood Restaurant & Steakhouse | 4748 N Goldwater
-                        Blvd
-                        <br /> <br />
-                        <b>Date:</b> Dec 11, 2025
-                        <br /> <br />
-                        <b>Time:</b> 5:00pm - 8:00pm, Mountain Time
-                    </p>
-                    <button class="isara-btn isara-btn-danger" type="button">
-                        Request Invitation
-                    </button>
-                </div>
-                <div class="upcoming_card">
-                    <h4 class="upcoming_card_title">
-                        Cyber security round table in Scottsdale
-                    </h4>
-                    <span class="upcoming_card_location">
-                        Scottsdale, Arizona
-                    </span>
-                    <p class="upcoming_card_desc">
-                        <b>Venue:</b> Ocean 44 Premier Fine Dining Seafood Restaurant & Steakhouse | 4748 N Goldwater
-                        Blvd
-                        <br /> <br />
-                        <b>Date:</b> Dec 11, 2025
-                        <br /> <br />
-                        <b>Time:</b> 5:00pm - 8:00pm, Mountain Time
-                    </p>
-                    <button class="isara-btn isara-btn-danger" type="button">
-                        Request Invitation
-                    </button>
-                </div>
-                <div class="upcoming_card">
-                    <h4 class="upcoming_card_title">
-                        Cyber security round table in Scottsdale
-                    </h4>
-                    <span class="upcoming_card_location">
-                        Scottsdale, Arizona
-                    </span>
-                    <p class="upcoming_card_desc">
-                        <b>Venue:</b> Ocean 44 Premier Fine Dining Seafood Restaurant & Steakhouse | 4748 N Goldwater
-                        Blvd
-                        <br /> <br />
-                        <b>Date:</b> Dec 11, 2025
-                        <br /> <br />
-                        <b>Time:</b> 5:00pm - 8:00pm, Mountain Time
-                    </p>
-                    <button class="isara-btn isara-btn-danger" type="button">
-                        Request Invitation
-                    </button>
-                </div>
-                <div class="upcoming_card">
-                    <h4 class="upcoming_card_title">
-                        Cyber security round table in Scottsdale
-                    </h4>
-                    <span class="upcoming_card_location">
-                        Scottsdale, Arizona
-                    </span>
-                    <p class="upcoming_card_desc">
-                        <b>Venue:</b> Ocean 44 Premier Fine Dining Seafood Restaurant & Steakhouse | 4748 N Goldwater
-                        Blvd
-                        <br /> <br />
-                        <b>Date:</b> Dec 11, 2025
-                        <br /> <br />
-                        <b>Time:</b> 5:00pm - 8:00pm, Mountain Time
-                    </p>
-                    <button class="isara-btn isara-btn-danger" type="button">
-                        Request Invitation
-                    </button>
-                </div>
-
+        <!-- ══ TESTIMONIALS ═══════════════════════════════════════════ -->
+        <section class="dinner-testimonials" aria-labelledby="testimonials-heading">
+            <div class="dinner-testimonials__bg" aria-hidden="true">
+                <img src="/assets/LTS/assets/dinner/Testimonials 4.png" alt="" />
             </div>
-
+            <div class="container dinner-testimonials__inner">
+                <h2 class="dinner-testimonials__title" id="testimonials-heading">
+                    Words From Leaders At Previous Dinners
+                </h2>
+                <div class="dinner-testimonials__cards">
+                    <div class="dinner-review">
+                        <div class="dinner-review__author">
+                            <p class="dinner-review__name">John Routh</p>
+                            <p class="dinner-review__role">
+                                SR Director of Security — Architecture Assurance, Oracle
+                            </p>
+                        </div>
+                        <p class="dinner-review__text">
+                            "What set this event apart was the absence of slides, product pitches, or hidden agendas.
+                            Instead, it was a gathering of local security leaders engaging in open discussions about our
+                            pressing concerns and future challenges. We touched on post-quantum cryptography and the
+                            urgency surrounding PQC readiness, but the conversation frequently returned to immediate
+                            issues: AI governance, the risks and benefits of Agentic AI, and the foundational security
+                            work that must be addressed before PQC can be realistically implemented. The consensus was
+                            clear — understanding your current environment, including physical assets, software
+                            inventories, and the existing use of cryptography, is essential to establish the baseline
+                            that PQC requires."
+                        </p>
+                    </div>
+                    <div class="dinner-review">
+                        <div class="dinner-review__author">
+                            <p class="dinner-review__name">Carl A. Picconatto, Ph.D.</p>
+                            <p class="dinner-review__role">
+                                Director, Emerging Technologies Innovation Center<br />
+                                The MITRE Corporation
+                            </p>
+                        </div>
+                        <p class="dinner-review__text">
+                            "After the very enjoyable and engaging evening I spent with ISARA and the group you put
+                            together, I decided to accept a similar invitation from another vendor. Instead of a
+                            pleasant discussion about serious issues, I was treated to a presentation and a sales
+                            pitch. Like your event, they did have some excellent attendees, and I did get to meet them,
+                            but we did not have a chance to engage with each other like we did at your dinner. It was
+                            truly night and day.<br /><br />
+                            I just thought you would like to know that you are way ahead of your peers."
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="tools">
+        <!-- ══ WHAT & WHO ════════════════════════════════════════════ -->
+        <section class="tools" id="who-attends" aria-labelledby="tools-heading">
             <div class="container tools_inner">
-                <h3 class="isara-h3">
+                <h3 class="isara-h3" id="tools-heading">
                     A Confidential, High-Value Discussion Designed for CISOs
                 </h3>
-                <p class="isara-p-lg">
-                    These dinners are built for leaders who need clarity on cryptographic risk, modernization strategy,
-                    and the realities of preparing large organizations for the post-quantum era. The format is tight,
-                    curated, and designed to spark meaningful peer-level insight.
-                </p>
                 <div class="tools_container">
                     <div class="tool">
-                        <img width="122" height="111" alt="tools-a" src="/assets/LTS/assets/dinner_a.svg" />
+                        <img width="67" height="70" alt="" src="/assets/LTS/assets/dinner_a.svg" />
                         <div class="tool_content">
-                            <h4 class="tool_title">
-                                What You Can Expect</h4>
+                            <h4 class="tool_title">What You Can Expect</h4>
                             <ul>
-                                <li><b>Executive-Level Roundtable:</b> 10-20 CISOs and senior leaders in a closed door,
-                                    peer-driven format.</li>
+                                <li><b>Executive-Level Roundtable:</b> 10–20 CISOs and senior leaders in a closed
+                                    door, peer-driven format.</li>
                                 <li><b>Research-Backed Discussion Topics:</b> Cryptographic posture visibility,
-                                    algorithm risk,
-                                    hybrid certificates, PQC migration timelines, and governance challenges.</li>
+                                    algorithm risk, hybrid certificates, PQC migration timelines, and governance
+                                    challenges.</li>
                                 <li><b>Cross-Industry Insight:</b> Perspectives from government, financial services,
-                                    energy,
-                                    and critical infrastructure leaders dealing with long-life systems and compliance
-                                    pressure.</li>
+                                    energy, and critical infrastructure leaders dealing with long-life systems and
+                                    compliance pressure.</li>
                                 <li><b>Expert Facilitation:</b> Hosted by ISARA's leadership and cryptography
-                                    specialists to
-                                    ensure accuracy, depth, and practicality.</li>
+                                    specialists to ensure accuracy, depth, and practicality.</li>
                                 <li><b>Zero Sales Pitch:</b> These sessions prioritize substance, not presentations or
                                     demos.</li>
-                                </li>
                             </ul>
                         </div>
-
-
                     </div>
                     <div class="tool">
-                        <img width="122" height="111" alt="tools-a" src="/assets/LTS/assets/dinner_b.svg" />
+                        <img width="61" height="70" alt="" src="/assets/LTS/assets/dinner_b.svg" />
                         <div class="tool_content">
-                            <h4 class="tool_title">
-                                Who Attends
-                            </h4>
-                            <ul>
-                                This invite-only format is designed for executives responsible for securing
-                                cryptographic systems and long-term security strategy, including:
-                                <li>CISOs & Deputy CISOs</li>
-                                <li>Directors of Information Security & Security Operations </li>
-                                <li>Heads of Cryptography, PKI, or IAM</li>
-                                <li>Security Architects & Engineering Leaders</li>
-                                <li>Government & Critical Infrastructure Security Executives</li>
-                                <li>Financial Services Security Leaders managing algorithm audits and regulatory
-                                    pressure</li>
-                            </ul>
+                            <h4 class="tool_title">Who Attends</h4>
+                            <div class="tool_content_text">
+                                <p>This invite-only format is designed for executives responsible for securing
+                                    cryptographic systems and long-term security strategy, including:</p>
+                                <ul>
+                                    <li>CISOs &amp; Deputy CISOs</li>
+                                    <li>Directors of Information Security &amp; Security Operations</li>
+                                    <li>Heads of Cryptography, PKI, or IAM</li>
+                                    <li>Security Architects &amp; Engineering Leaders</li>
+                                    <li>Government &amp; Critical Infrastructure Security Executives</li>
+                                    <li>Financial Services Security Leaders managing algorithm audits and regulatory
+                                        pressure</li>
+                                </ul>
+                            </div>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </section>
 
-        <section class="container reviews_inner">
-            <h3 class="isara-h3">
-                Trusted by Critical Infrastructure Leaders
-            </h3>
-            <p class="isara-p-lg">
-                Organizations worldwide rely on ICARA to protect their most sensitive data against quantum threats
-            </p>
-            <div class="reviews_container">
-                <div class="review">
-                    <div class="review_author_container">
-                        <img width="65" height="65" alt="reviews-a" src="/assets/LTS/assets/sara.png" />
-                        <p class="review_author">
-                            <span class="review_author_name">SARAH CHEN</span>
-                            <span class="review_author_title">Chief Security Officer</span>
-                        </p>
-                    </div>
-                    <p class="review_text">
-                        ISARA's quantum-ready cryptography has given us the confidence to secure our critical
-                        infrastructure for the next decade. The transition was seamless, and their team's expertise
-                        is unmatched.
-                    </p>
-                </div>
-                <div class="review">
-                    <div class="review_author_container">
-                        <img width="65" height="65" alt="reviews-a" src="/assets/LTS/assets/sara.png" />
-                        <p class="review_author">
-                            <span class="review_author_name">SARAH CHEN</span>
-                            <span class="review_author_title">Chief Security Officer</span>
-                        </p>
-                    </div>
-                    <p class="review_text">
-                        ISARA's quantum-ready cryptography has given us the confidence to secure our critical
-                        infrastructure for the next decade. The transition was seamless, and their team's expertise
-                        is unmatched.
-                    </p>
-                </div>
-                <div class="review">
-                    <div class="review_author_container">
-                        <img width="65" height="65" alt="reviews-a" src="/assets/LTS/assets/sara.png" />
-                        <p class="review_author">
-                            <span class="review_author_name">SARAH CHEN</span>
-                            <span class="review_author_title">Chief Security Officer</span>
-                        </p>
-                    </div>
-                    <p class="review_text">
-                        ISARA's quantum-ready cryptography has given us the confidence to secure our critical
-                        infrastructure for the next decade. The transition was seamless, and their team's expertise
-                        is unmatched.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <figure class="cta__bg" aria-hidden="true">
-                <img src="/assets/LTS/assets/secbg2.png" alt="bg" width="465" height="472" />
-            </figure>
-            <div class="container cta_inner">
-                <h2 class="isara-h2">
-                    Join CISOs Preparing Their Organizations for Quantum-Era Threats
-                </h2>
-                <p class="isara-p-lg">
-                    Our dinners unite leaders from government, financial services, energy, and critical infrastructure
-                    to discuss cryptographic visibility, compliance pressure, and quantum-safe migration timelines.
-                </p>
-                <div class="hero__actions">
-                    <a href="#request-invitation" class="isara-btn isara-btn-danger">
-                        Request an Invitation
-                    </a>
-                    <button class="isara-btn isara-btn-cta" type="button">
-                        <span>See How Your Industry Is Preparing</span>
-                        <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
-                    </button>
-                </div>
-            </div>
-        </section>
     </main>
-    <script type="module" src="/src/js/dinner.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const whoAttendsButton = document.querySelector('a[href="#who-attends"]');
+            const whoAttendsSection = document.getElementById("who-attends");
+
+            if (whoAttendsButton && whoAttendsSection) {
+                whoAttendsButton.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const offsetTop = whoAttendsSection.offsetTop - 120;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: "smooth",
+                    });
+                });
+            }
+        });
+    </script>
 
 </body>
 
