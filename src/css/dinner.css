@@ -309,22 +309,37 @@
     width: 100%;
 }
 
-.dinner-testimonials__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+/* ── Slider wrapper ── */
+.dinner-testimonials__slider {
     width: 100%;
+    overflow: hidden;
+    cursor: grab;
 }
 
+.dinner-testimonials__slider:active {
+    cursor: grabbing;
+}
+
+.dinner-testimonials__track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    user-select: none;
+}
+
+/* ── Individual card ── */
 .dinner-review {
+    flex: 0 0 100%;
+    min-width: 0;
     background: #fff;
     border: 1px solid var(--ISARA-Light-Grey, #ececec);
     border-radius: 20px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    box-sizing: border-box;
 }
 
 .dinner-review__author {
@@ -362,10 +377,40 @@
     margin: 0;
 }
 
+/* ── Dot pagination ── */
+.dinner-testimonials__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dinner-testimonials__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    flex-shrink: 0;
+}
+
+.dinner-testimonials__dot--active {
+    background: #fff;
+    transform: scale(1.15);
+}
+
+.dinner-testimonials__dot:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 @media (min-width: 768px) {
     .dinner-testimonials__inner {
         padding: 80px 140px 100px;
-        gap: 41px;
+        gap: 30px;
     }
 
     .dinner-testimonials__title {
@@ -373,15 +418,8 @@
         max-width: 876px;
     }
 
-    .dinner-testimonials__cards {
-        flex-direction: row;
-        align-items: stretch;
-        gap: 31px;
-    }
-
     .dinner-review {
-        flex: 1 0 0;
-        min-width: 0;
+        padding: 40px 50px;
     }
 }
 
