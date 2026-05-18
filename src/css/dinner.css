@@ -309,11 +309,25 @@
     width: 100%;
 }
 
-/* ── Slider wrapper ── */
-.dinner-testimonials__slider {
+/* ── Slider viewport: clips the track with a rounded mask ── */
+.dinner-testimonials__slider-viewport {
     width: 100%;
     overflow: hidden;
+    /* border-radius + overflow:hidden = rounded clip mask.
+       Cards entering/exiting are cut with the same 20px curve they already
+       have, so no straight-edge flash during the slide transition. */
+    border-radius: 20px;
+    /* Vertical breathing room so the drop-shadow isn't clipped */
+    padding: 6px 0;
+    margin: -6px 0;
+    box-sizing: content-box;
+}
+
+/* ── Slider: grab cursor, no overflow so border-radius is never clipped ── */
+.dinner-testimonials__slider {
+    width: 100%;
     cursor: grab;
+    user-select: none;
 }
 
 .dinner-testimonials__slider:active {
@@ -323,14 +337,14 @@
 .dinner-testimonials__track {
     display: flex;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-    user-select: none;
+    /* No will-change here — it creates a compositing layer that conflicts
+       with overflow:hidden on the viewport and causes border-radius loss */
 }
 
 /* ── Individual card ── */
 .dinner-review {
-    flex: 0 0 100%;
-    min-width: 0;
+    /* width is set by JS to exactly the slider viewport width */
+    flex-shrink: 0;
     background: #fff;
     border: 1px solid var(--ISARA-Light-Grey, #ececec);
     border-radius: 20px;

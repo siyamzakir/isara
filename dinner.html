@@ -89,43 +89,65 @@
                 <h2 class="dinner-testimonials__title" id="testimonials-heading">
                     Words From Leaders At Previous Dinners
                 </h2>
-                <div class="dinner-testimonials__slider" role="region" aria-label="Testimonials slider">
-                    <div class="dinner-testimonials__track" id="testimonialsTrack">
-                        <div class="dinner-review" role="group" aria-label="Testimonial 1 of 2">
-                            <p class="dinner-review__text">
-                                "What set this event apart was the absence of slides, product pitches, or hidden agendas.
-                                Instead, it was a gathering of local security leaders engaging in open discussions about our
-                                pressing concerns and future challenges. We touched on post-quantum cryptography and the
-                                urgency surrounding PQC readiness, but the conversation frequently returned to immediate
-                                issues: AI governance, the risks and benefits of Agentic AI, and the foundational security
-                                work that must be addressed before PQC can be realistically implemented. The consensus was
-                                clear — understanding your current environment, including physical assets, software
-                                inventories, and the existing use of cryptography, is essential to establish the baseline
-                                that PQC requires."
-                            </p>
-                            <div class="dinner-review__author">
-                                <p class="dinner-review__name">John Routh</p>
-                                <p class="dinner-review__role">
-                                    SR Director of Security — Architecture Assurance, Oracle
+                <div class="dinner-testimonials__slider-viewport">
+                    <div class="dinner-testimonials__slider" role="region" aria-label="Testimonials slider" id="testimonialsSlider">
+                        <div class="dinner-testimonials__track" id="testimonialsTrack">
+                            <div class="dinner-review" role="group" aria-label="Testimonial 1 of 3">
+                                <p class="dinner-review__text">
+                                    "What set this event apart was the absence of slides, product pitches, or hidden agendas.
+                                    Instead, it was a gathering of local security leaders engaging in open discussions about our
+                                    pressing concerns and future challenges. We touched on post-quantum cryptography and the
+                                    urgency surrounding PQC readiness, but the conversation frequently returned to immediate
+                                    issues: AI governance, the risks and benefits of Agentic AI, and the foundational security
+                                    work that must be addressed before PQC can be realistically implemented. The consensus was
+                                    clear — understanding your current environment, including physical assets, software
+                                    inventories, and the existing use of cryptography, is essential to establish the baseline
+                                    that PQC requires."
                                 </p>
+                                <div class="dinner-review__author">
+                                    <p class="dinner-review__name">John Routh</p>
+                                    <p class="dinner-review__role">
+                                        SR Director of Security — Architecture Assurance, Oracle
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dinner-review" role="group" aria-label="Testimonial 2 of 2">
-                            <p class="dinner-review__text">
-                                "After the very enjoyable and engaging evening I spent with ISARA and the group you put
-                                together, I decided to accept a similar invitation from another vendor. Instead of a
-                                pleasant discussion about serious issues, I was treated to a presentation and a sales
-                                pitch. Like your event, they did have some excellent attendees, and I did get to meet them,
-                                but we did not have a chance to engage with each other like we did at your dinner. It was
-                                truly night and day.<br /><br />
-                                I just thought you would like to know that you are way ahead of your peers."
-                            </p>
-                            <div class="dinner-review__author">
-                                <p class="dinner-review__name">Carl A. Picconatto, Ph.D.</p>
-                                <p class="dinner-review__role">
-                                    Director, Emerging Technologies Innovation Center<br />
-                                    The MITRE Corporation
+                            <!-- Slide 2: replace with additional testimonial content -->
+                            <div class="dinner-review" role="group" aria-label="Testimonial 2 of 3">
+                                <p class="dinner-review__text">
+                                    "After the very enjoyable and engaging evening I spent with ISARA and the group you put
+                                    together, I decided to accept a similar invitation from another vendor. Instead of a
+                                    pleasant discussion about serious issues, I was treated to a presentation and a sales
+                                    pitch. Like your event, they did have some excellent attendees, and I did get to meet them,
+                                    but we did not have a chance to engage with each other like we did at your dinner. It was
+                                    truly night and day.<br /><br />
+                                    I just thought you would like to know that you are way ahead of your peers."
                                 </p>
+                                <div class="dinner-review__author">
+                                    <p class="dinner-review__name">Carl A. Picconatto, Ph.D.</p>
+                                    <p class="dinner-review__role">
+                                        Director, Emerging Technologies Innovation Center<br />
+                                        The MITRE Corporation
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="dinner-review" role="group" aria-label="Testimonial 3 of 3">
+                                <p class="dinner-review__text">
+                                    "What set this event apart was the absence of slides, product pitches, or hidden agendas.
+                                    Instead, it was a gathering of local security leaders engaging in open discussions about our
+                                    pressing concerns and future challenges. We touched on post-quantum cryptography and the
+                                    urgency surrounding PQC readiness, but the conversation frequently returned to immediate
+                                    issues: AI governance, the risks and benefits of Agentic AI, and the foundational security
+                                    work that must be addressed before PQC can be realistically implemented. The consensus was
+                                    clear — understanding your current environment, including physical assets, software
+                                    inventories, and the existing use of cryptography, is essential to establish the baseline
+                                    that PQC requires."
+                                </p>
+                                <div class="dinner-review__author">
+                                    <p class="dinner-review__name">John Routh</p>
+                                    <p class="dinner-review__role">
+                                        SR Director of Security — Architecture Assurance, Oracle
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,6 +155,7 @@
                 <div class="dinner-testimonials__dots" role="tablist" aria-label="Testimonial navigation" id="testimonialsDots">
                     <button class="dinner-testimonials__dot dinner-testimonials__dot--active" data-index="0" role="tab" aria-selected="true" aria-label="Go to testimonial 1"></button>
                     <button class="dinner-testimonials__dot" data-index="1" role="tab" aria-selected="false" aria-label="Go to testimonial 2"></button>
+                    <button class="dinner-testimonials__dot" data-index="2" role="tab" aria-selected="false" aria-label="Go to testimonial 3"></button>
                 </div>
             </div>
         </section>
@@ -207,15 +230,35 @@
             }
 
             // Testimonials slider
-            const track = document.getElementById("testimonialsTrack");
-            const dots = document.querySelectorAll(".dinner-testimonials__dot");
-            let currentIndex = 0;
-            let startX = 0;
-            let isDragging = false;
+            var slider = document.getElementById("testimonialsSlider");
+            var track = document.getElementById("testimonialsTrack");
+            var dots = document.querySelectorAll(".dinner-testimonials__dot");
+            var reviews = track.querySelectorAll(".dinner-review");
+            var currentIndex = 0;
+            var startX = 0;
+            var isDragging = false;
+
+            function getSlideWidth() {
+                return slider.offsetWidth;
+            }
+
+            function initSlider() {
+                var w = getSlideWidth();
+                reviews.forEach(function (review) {
+                    review.style.width = w + "px";
+                    review.style.flexShrink = "0";
+                });
+                // Reapply current position without animation on resize
+                track.style.transition = "none";
+                track.style.transform = "translateX(-" + (currentIndex * w) + "px)";
+                requestAnimationFrame(function () {
+                    track.style.transition = "";
+                });
+            }
 
             function goToSlide(index) {
                 currentIndex = index;
-                track.style.transform = "translateX(-" + (index * 100) + "%)";
+                track.style.transform = "translateX(-" + (index * getSlideWidth()) + "px)";
                 dots.forEach(function (dot, i) {
                     dot.classList.toggle("dinner-testimonials__dot--active", i === index);
                     dot.setAttribute("aria-selected", i === index ? "true" : "false");
@@ -229,11 +272,11 @@
             });
 
             // Touch / drag support
-            track.addEventListener("touchstart", function (e) {
+            slider.addEventListener("touchstart", function (e) {
                 startX = e.touches[0].clientX;
             }, { passive: true });
 
-            track.addEventListener("touchend", function (e) {
+            slider.addEventListener("touchend", function (e) {
                 var diff = startX - e.changedTouches[0].clientX;
                 if (Math.abs(diff) > 50) {
                     var next = diff > 0
@@ -243,9 +286,10 @@
                 }
             });
 
-            track.addEventListener("mousedown", function (e) {
+            slider.addEventListener("mousedown", function (e) {
                 startX = e.clientX;
                 isDragging = true;
+                e.preventDefault();
             });
 
             document.addEventListener("mouseup", function (e) {
@@ -259,6 +303,9 @@
                     goToSlide(next);
                 }
             });
+
+            window.addEventListener("resize", initSlider);
+            initSlider();
         });
     </script>
 
