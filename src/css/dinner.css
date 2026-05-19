@@ -151,11 +151,28 @@
     max-width: 469px;
 }
 
-.dinner-hero__image img {
+.dinner-hero__carousel {
+    position: relative;
     width: 100%;
-    height: auto;
+    /* Lock the aspect ratio to match the original 469×387 image */
+    aspect-ratio: 469 / 387;
     border-radius: 20px;
-    display: block;
+    overflow: hidden;
+}
+
+.dinner-hero__carousel-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.dinner-hero__carousel-slide--active {
+    opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -284,7 +301,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.8;
     display: block;
 }
 

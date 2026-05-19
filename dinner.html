@@ -40,7 +40,13 @@
                 </div>
             </div>
             <figure class="dinner-hero__image" aria-hidden="true">
-                <img src="/assets/LTS/assets/dinner_hero.png" alt="Security executives attending a private ISARA-hosted CISO dinner discussion." width="469" height="387" />
+                <div class="dinner-hero__carousel">
+                    <img class="dinner-hero__carousel-slide dinner-hero__carousel-slide--active" src="/assets/LTS/assets/dinner/1 CISO Dinner at Austin TX.jpeg" alt="CISO Dinner at Austin TX" />
+                    <img class="dinner-hero__carousel-slide" src="/assets/LTS/assets/dinner/2 CISO Dinner at Tampa FL.jpeg" alt="CISO Dinner at Tampa FL" />
+                    <img class="dinner-hero__carousel-slide" src="/assets/LTS/assets/dinner/3 CISO Dinner at Menlo Park.jpeg" alt="CISO Dinner at Menlo Park" />
+                    <img class="dinner-hero__carousel-slide" src="/assets/LTS/assets/dinner/4 RBC - TD Dinner with Atsushi.png" alt="RBC TD Dinner with Atsushi" />
+                    <img class="dinner-hero__carousel-slide" src="/assets/LTS/assets/dinner/5 CISO Dinner at Scottsdale AZ.jpg" alt="CISO Dinner at Scottsdale AZ" />
+                </div>
             </figure>
         </section>
 
@@ -228,6 +234,17 @@
                     });
                 });
             }
+
+            // Hero image carousel (fade)
+            (function () {
+                var slides = document.querySelectorAll(".dinner-hero__carousel-slide");
+                var current = 0;
+                setInterval(function () {
+                    slides[current].classList.remove("dinner-hero__carousel-slide--active");
+                    current = (current + 1) % slides.length;
+                    slides[current].classList.add("dinner-hero__carousel-slide--active");
+                }, 8000);
+            })();
 
             // Testimonials slider
             var slider = document.getElementById("testimonialsSlider");
