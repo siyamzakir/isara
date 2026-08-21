@@ -1,0 +1,42 @@
+# --- ISARA 410 Gone rules (staging) ---
+# Bulk: Apache manual probe paths (56 URLs)
+RewriteRule ^manual/ - [G,L]
+
+# Individual 410 paths
+# SKIP (malformed URL): /).
+# SKIP (malformed URL): /</a>.</p><img
+RewriteRule ^assets/LTS/assets/partnership/ISARA-Solution-Overview.pdf$ - [G,L]
+RewriteRule ^assets/LTS/assets/product/features_d.png$ - [G,L]
+# SKIP (malformed URL): /blog-posts/author/ISARA Corporation & Accenture Federal Services
+RewriteRule ^blog-posts/blog-posts/$ - [G,L]
+RewriteRule ^blog-posts/nist-advances-selection-round.html$ - [G,L]
+RewriteRule ^catalyst/$ - [G,L]
+RewriteRule ^company/company/careers/demand-generation-manager.html$ - [G,L]
+RewriteRule ^company/duplicate-of-leadership-team.html$ - [G,L]
+RewriteRule ^company/newsroom/press-releases/keyfactor-acquires-isara.html$ - [G,L]
+RewriteRule ^company/solutions/use-cases/crypto-agility-in-pkis.html$ - [G,L]
+RewriteRule ^crypto-agility-quantum-safe/$ - [G,L]
+RewriteRule ^en/collections/babywearing-coats$ - [G,L]
+RewriteRule ^isara-catalyst-openssl-connector/$ - [G,L]
+RewriteRule ^isogeny-based-cryptography/$ - [G,L]
+RewriteRule ^library/4/doc/library/reference.html$ - [G,L]
+RewriteRule ^products/isara-advance-cryptographic-inventory-and-risk-assessment-tool-old.html$ - [G,L]
+RewriteRule ^products/isara-catalyst-agile-digital-certificate-methodology.html$ - [G,L]
+RewriteRule ^products/isara-catalyst-connector-for-openssl.html$ - [G,L]
+RewriteRule ^products/isara-catalyst-tls.html$ - [G,L]
+RewriteRule ^quantum-computing-emergence-implications/$ - [G,L]
+RewriteRule ^resource-center/products/isara-catalyst-agile-digital-certificate-methodology.html$ - [G,L]
+RewriteRule ^resource-center/solutions/use-cases/crypto-agility-in-pkis.html$ - [G,L]
+RewriteRule ^solutions/use-cases/company$ - [G,L]
+RewriteRule ^solutions/use-cases/company/about.html$ - [G,L]
+RewriteRule ^solutions/use-cases/company/careers$ - [G,L]
+RewriteRule ^solutions/use-cases/company/newsroom$ - [G,L]
+RewriteRule ^solutions/use-cases/partners.html$ - [G,L]
+RewriteRule ^solutions/use-cases/products$ - [G,L]
+RewriteRule ^solutions/use-cases/resource-center/the-viability-of-post-quantum-x.509-certificates.html$ - [G,L]
+RewriteRule ^solutions/use-cases/resources$ - [G,L]
+RewriteRule ^solutions/use-cases/services$ - [G,L]
+RewriteRule ^solutions/use-cases/solutions$ - [G,L]
+RewriteRule ^solutions/use-cases/solutions/use-cases/crypto-agility-in-pkis.html$ - [G,L]
+RewriteRule ^toolkit/security.html$ - [G,L]
+RewriteRule ^understanding-quantum-threats-to-cryptography/$ - [G,L]
