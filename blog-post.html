@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Title - ISARA</title>
+</head>
+
+<body>
+
+  <main class="site-main blog-post-page" id="main">
+
+    <!--
+      Individual blog post template for MODX Blog collection.
+      In MODX: Collections → Blog → New Page, then paste this main markup.
+      Keep heading IDs in sync with the Contents sidebar links.
+    -->
+
+    <!-- Hero -->
+    <section class="blog-post-hero" aria-labelledby="blog-post-heading">
+      <div class="blog-post-hero__bg" aria-hidden="true">
+        <img src="/assets/LTS/assets/secbg2.png" alt="" width="465" height="472" />
+      </div>
+      <div class="container blog-post-hero__inner">
+        <nav class="blog-post-hero__crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/blog-posts.html">Blog</a>
+          <span aria-hidden="true">/</span>
+          <span>Title</span>
+        </nav>
+        <h1 class="isara-h2 blog-post-hero__title" id="blog-post-heading" data-fred-name="fred_h1_blog_title"
+          data-fred-rte="true">
+          Blog Title
+        </h1>
+        <ul class="blog-post-hero__share" aria-label="Share this article">
+          <li>
+            <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+              <img src="/assets/LTS/assets/twitter-x.svg" alt="" width="18" height="18" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener noreferrer"
+              aria-label="Share on LinkedIn">
+              <img src="/assets/LTS/assets/linkedin.svg" alt="" width="18" height="18" />
+            </a>
+          </li>
+          <li>
+            <a href="mailto:?subject=Blog%20Title" aria-label="Share by email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 6h16v12H4V6zm0 0l8 7 8-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Article + Contents -->
+    <section class="blog-post-body">
+      <div class="container blog-post-layout">
+
+        <aside class="blog-toc" aria-label="On this page">
+          <details class="blog-toc__panel" open>
+            <summary class="blog-toc__summary">Contents</summary>
+            <nav class="blog-toc__nav">
+              <a href="#intro" class="blog-toc__link is-active">Intro</a>
+              <a href="#main-heading" class="blog-toc__link">Main Heading</a>
+              <a href="#subheading" class="blog-toc__link">Subheading Content</a>
+              <a href="#comparison" class="blog-toc__link">Comparison</a>
+              <a href="#summary" class="blog-toc__link">Summary</a>
+            </nav>
+          </details>
+        </aside>
+
+        <article class="blog-article" data-fred-name="fred_blog_article" data-fred-rte="true">
+
+          <p class="blog-article__lead">
+            Replace this lead paragraph with the opening of the post. Keep the Contents links on the left
+            pointing at the heading IDs in this article so readers can jump to each topic on the same page.
+          </p>
+
+          <h2 id="intro">Intro</h2>
+          <p>
+            Use this section for context: why the topic matters, who it is for, and what the reader will
+            take away. Short paragraphs and a clear first heading help the Contents sidebar stay useful.
+          </p>
+          <p>
+            Cryptography sits underneath every modern security program, yet most teams still cannot see
+            which protocols, certificates, and algorithms are actually running in production.
+          </p>
+          <ul>
+            <li>Discovery of cryptographic assets across the environment</li>
+            <li>Validation against current and post-quantum standards</li>
+            <li>Prioritized remediation through existing operational workflows</li>
+          </ul>
+
+          <h2 id="main-heading">Main Heading</h2>
+          <p>
+            Expand the core argument here. Headings in this column become the Contents links — when you
+            add or rename a section, update the matching <code>id</code> and sidebar link.
+          </p>
+          <figure class="blog-article__figure">
+            <img src="/assets/LTS/assets/blog_a.jpg" alt="Article supporting image" width="800" height="420" />
+          </figure>
+          <p>
+            Images, lists, and callouts all live in this column. The sidebar stays in place on desktop
+            so readers can move between topics without losing their place.
+          </p>
+
+          <h2 id="subheading">Subheading Content</h2>
+          <h3>Supporting point</h3>
+          <p>
+            Nested headings work for longer posts. Keep H2s for Contents entries and use H3s for
+            supporting points inside a section.
+          </p>
+          <div class="blog-article__callout">
+            <p>
+              Callout: use this box for a definition, quote, or key takeaway that should stand apart
+              from the body copy.
+            </p>
+          </div>
+          <ul>
+            <li>First supporting detail for this subsection</li>
+            <li>Second supporting detail with enough context to scan</li>
+            <li>Third supporting detail that points to the next section</li>
+          </ul>
+
+          <h2 id="comparison">Comparison</h2>
+          <p>
+            Tables are useful for side-by-side capability or step summaries.
+          </p>
+          <div class="blog-article__table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>What it delivers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Discover</td>
+                  <td>Live inventory of protocols, ciphers, certificates, and algorithms</td>
+                </tr>
+                <tr>
+                  <td>Validate</td>
+                  <td>Findings flagged against current and post-quantum standards</td>
+                </tr>
+                <tr>
+                  <td>Prioritize</td>
+                  <td>Ranked remediation queue weighted by business context</td>
+                </tr>
+                <tr>
+                  <td>Remediate</td>
+                  <td>Work routed through existing ITSM workflows</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="summary">Summary</h2>
+          <p>
+            Close with the action you want the reader to take, then optional expandable notes below.
+          </p>
+
+          <div class="blog-article__faq">
+            <h3>Summary of recommended tools / methods</h3>
+
+            <div class="blog-faq-item">
+              <button class="blog-faq-item__btn" type="button" aria-expanded="true" aria-controls="blog-faq-1">
+                <span>What should stay in the Contents sidebar?</span>
+                <svg class="blog-faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  aria-hidden="true">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="blog-faq-1" class="blog-faq-item__answer">
+                <p>
+                  Only the H2 topics on this page. Each Contents link should jump to an <code>id</code>
+                  on the same post, not to another URL.
+                </p>
+              </div>
+            </div>
+
+            <div class="blog-faq-item">
+              <button class="blog-faq-item__btn" type="button" aria-expanded="false" aria-controls="blog-faq-2">
+                <span>Where do related posts come from?</span>
+                <svg class="blog-faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  aria-hidden="true">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="blog-faq-2" class="blog-faq-item__answer" hidden>
+                <p>
+                  The three cards at the bottom preview other Blog collection items. In MODX this can
+                  be swapped for a getResources call that pulls the latest published posts.
+                </p>
+              </div>
+            </div>
+
+            <div class="blog-faq-item">
+              <button class="blog-faq-item__btn" type="button" aria-expanded="false" aria-controls="blog-faq-3">
+                <span>How is this created in MODX?</span>
+                <svg class="blog-faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  aria-hidden="true">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="blog-faq-3" class="blog-faq-item__answer" hidden>
+                <p>
+                  Open Collections → Blog → New Page, set the title and slug, then paste this layout
+                  into the page content so it uses the existing blog template instead of a one-off page.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- Related posts — in MODX, replace the three cards with getResources -->
+    <section class="blog-related" aria-labelledby="blog-related-heading">
+      <div class="container blog-related__inner">
+        <h2 class="isara-h2 blog-related__title" id="blog-related-heading">From Our Blog</h2>
+        <div class="blog-related__cards">
+
+          <article class="blog-related-card">
+            <img class="blog-related-card__image" src="/assets/LTS/assets/blog_a.jpg" alt="" width="300" height="180" />
+            <div class="blog-related-card__body">
+              <h3>Cybersecurity in the Age of Quantum Computing</h3>
+              <p>
+                Computing power has advanced far beyond the invention of the transistor. Today's digital
+                infrastructures rely on public-key cryptography to safeguard commerce and privacy.
+              </p>
+              <a class="isara-btn isara-btn-cta"
+                href="/blog-posts/what-is-crypto-agility-the-complete-guide-for-enterprise-security-teams.html">
+                <span>Read More</span>
+                <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-related-card">
+            <img class="blog-related-card__image" src="/assets/LTS/assets/blog-b.jpg" alt="" width="300" height="180" />
+            <div class="blog-related-card__body">
+              <h3>Strategic Risk Management: Aligning Cryptography with Business Goals</h3>
+              <p>
+                With so many urgent issues demanding attention, future risks can feel like tomorrow's
+                problem. Some of the most consequential issues cannot wait.
+              </p>
+              <a class="isara-btn isara-btn-cta"
+                href="/blog-posts/strategic-risk-management-tips-for-aligning-cryptography-with-business-goals.html">
+                <span>Read More</span>
+                <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-related-card">
+            <img class="blog-related-card__image" src="/assets/LTS/assets/blog-c.png" alt="" width="300" height="180" />
+            <div class="blog-related-card__body">
+              <h3>Overcoming Challenges in Quantum Readiness</h3>
+              <p>
+                Feeling overwhelmed about where to start with quantum readiness? You are not alone.
+                Many organizations have not taken steps to prepare.
+              </p>
+              <a class="isara-btn isara-btn-cta"
+                href="/blog-posts/overcoming-challenges-in-quantum-readiness-isara-webinar-recap.html">
+                <span>Read More</span>
+                <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="16" height="16" aria-hidden="true" />
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <a class="isara-btn isara-btn-danger blog-related__all" href="/blog-posts.html">
+          View All Articles
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="/src/js/blog.js"></script>
+</body>
+
+</html>
