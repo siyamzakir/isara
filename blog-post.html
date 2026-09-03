@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Title | ISARA</title>
+    <!--
+      ═══════════════════════════════════════════════════════════════
+      MODX blog-post-v2 template approach
+      ═══════════════════════════════════════════════════════════════
+
+      1. Create a NEW template "blog-post-v2" in MODX (don't touch existing blog template).
+      2. The template is identical to your current blog template EXCEPT it adds
+         the <style> block and <script> block from this file into the HEAD-CSS
+         and FOOTER-SCRIPTS chunks (or inline in the template itself).
+      3. Each section below goes into the Fred dropzone as a SECTION element.
+         Copy the HTML between the ══ SECTION markers.
+      4. The article content (Section 3) goes into a Fred SECTION → the TinyMCE
+         rich text area inside that section.
+      5. Existing blog posts stay on the old template. New posts use blog-post-v2.
+
+      CSS/JS (Option B): modx/chunks/blog-post-v2-css.html + blog-post-v2-js.html
+      Local preview: npx vite → http://localhost:5173/blog-post.html
+    -->
+    <link rel="stylesheet" href="/modx/chunks/blog-post-v2.css" />
+    <!-- MODX: paste modx/chunks/blog-post-v2-css.html into HEAD-CSS for blog-post-v2 template -->
+</head>
+
+<body>
+
+    <main class="bpv2" id="main">
+
+        <!-- ══════════════════════════════════════════════════════════
+             SECTION 1: HERO
+             Copy into: Fred → SECTION element
+             In MODX: change img src to [[*blog_featured_image]] TV
+             ══════════════════════════════════════════════════════════ -->
+        <section class="bpv2-hero">
+            <div class="bpv2-hero__media" aria-hidden="true">
+                <img src="/assets/LTS/assets/blog_a.jpg" alt="" width="1280" height="424" />
+                <div class="bpv2-hero__overlay"></div>
+            </div>
+            <div class="container bpv2-hero__inner">
+                <h1 class="bpv2-hero__title">Blog Title</h1>
+                <ul class="bpv2-hero__meta">
+                    <li>By ISARA</li>
+                    <li>August 12, 2026</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════════════════════
+             SECTION 3: CONTENTS + ARTICLE
+             Copy into: Fred → SECTION element
+             The article area is your TinyMCE rich text content.
+             Keep TOC links in sync with article h2 IDs.
+             ══════════════════════════════════════════════════════════ -->
+        <section class="bpv2-body">
+            <div class="bpv2-layout">
+
+                <aside class="bpv2-toc" aria-label="On this page">
+                    <details class="bpv2-toc__panel" open>
+                        <summary class="bpv2-toc__summary">Contents</summary>
+                        <nav class="bpv2-toc__nav">
+                            <a href="#intro" class="bpv2-toc__link is-active">Intro</a>
+                            <a href="#main-heading" class="bpv2-toc__link">Main Heading</a>
+                            <a href="#subheading" class="bpv2-toc__link">Subheading Content</a>
+                            <a href="#comparison" class="bpv2-toc__link">Comparison</a>
+                            <a href="#summary" class="bpv2-toc__link">Summary</a>
+                        </nav>
+                    </details>
+                </aside>
+
+                <article class="bpv2-article">
+                    <!-- ─── ARTICLE CONTENT (TinyMCE rich text area) ─── -->
+
+                    <div class="bpv2-article__definition">
+                        <p class="bpv2-article__definition-label">Definition</p>
+                        <p class="bpv2-article__definition-text">Replace with a one-sentence definition or key
+                            takeaway.</p>
+                    </div>
+
+                    <p class="bpv2-article__lead">
+                        Replace this lead paragraph with the opening of the post.
+                    </p>
+
+                    <h2 id="intro">Intro</h2>
+                    <p>
+                        Use this section for context: why the topic matters, who it is for, and what the reader will
+                        take away. Short paragraphs help the Contents sidebar stay useful.
+                    </p>
+                    <ul class="bpv2-article__list">
+                        <li>First key point for the reader</li>
+                        <li>Second key point for the reader</li>
+                        <li>Third key point for the reader</li>
+                    </ul>
+
+                    <h2 id="main-heading">Main Heading</h2>
+                    <p>
+                        Expand the core argument here. When you add or rename a section, update the matching
+                        <code>id</code> and sidebar link.
+                    </p>
+                    <figure class="bpv2-article__figure">
+                        <img src="/assets/LTS/assets/blog_a.jpg" alt="Article supporting image" width="800"
+                            height="420" />
+                    </figure>
+                    <div class="bpv2-article__callout">
+                        <p>Use this callout box for a definition, quote, or key takeaway that should stand apart from
+                            the body copy.</p>
+                    </div>
+
+                    <h2 id="subheading">Subheading Content</h2>
+                    <h3>Supporting point</h3>
+                    <p>
+                        Nested headings work for longer posts. Keep H2s for Contents entries and use H3s for supporting
+                        points.
+                    </p>
+
+                    <h2 id="comparison">Comparison</h2>
+                    <p>Tables are useful for side-by-side capability or step summaries.</p>
+                    <div class="bpv2-article__table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Step</th>
+                                    <th>What it delivers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Discover</td>
+                                    <td>Live inventory of protocols, ciphers, certificates, and algorithms</td>
+                                </tr>
+                                <tr>
+                                    <td>Validate</td>
+                                    <td>Findings flagged against current and post-quantum standards</td>
+                                </tr>
+                                <tr>
+                                    <td>Prioritize</td>
+                                    <td>Ranked remediation queue weighted by business context</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bpv2-article__grid">
+                        <div class="bpv2-article__grid-cell">Optional 2×2 grid cell for questions or points.</div>
+                        <div class="bpv2-article__grid-cell">Second grid cell.</div>
+                        <div class="bpv2-article__grid-cell">Third grid cell.</div>
+                        <div class="bpv2-article__grid-cell">Fourth grid cell.</div>
+                    </div>
+
+                    <h2 id="summary">Summary</h2>
+                    <p>Close with the action you want the reader to take.</p>
+
+                    <div class="bpv2-article__faq">
+                        <h3>Frequently Asked Questions</h3>
+
+                        <div class="bpv2-faq-item">
+                            <button class="bpv2-faq-item__btn" type="button" aria-expanded="true"
+                                aria-controls="bpv2-faq-1">
+                                <span>Question one goes here?</span>
+                                <svg class="bpv2-faq-item__chevron" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div id="bpv2-faq-1" class="bpv2-faq-item__answer">
+                                <p>Answer text goes here.</p>
+                            </div>
+                        </div>
+
+                        <div class="bpv2-faq-item">
+                            <button class="bpv2-faq-item__btn" type="button" aria-expanded="false"
+                                aria-controls="bpv2-faq-2">
+                                <span>Question two goes here?</span>
+                                <svg class="bpv2-faq-item__chevron" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" aria-hidden="true">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div id="bpv2-faq-2" class="bpv2-faq-item__answer" hidden>
+                                <p>Answer text goes here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ─── /ARTICLE CONTENT ─── -->
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════════════════════
+             SECTION 4A: CTA HEADER (copy this block into Fred → SECTION)
+             Primary button + three underlined text links (Figma layout)
+             ══════════════════════════════════════════════════════════ -->
+        <section class="bpv2-cta" aria-labelledby="bpv2-cta-heading">
+            <div class="bpv2-cta__deco" aria-hidden="true">
+                <img src="/assets/LTS/assets/secbg.png" alt="" width="595" height="600" />
+            </div>
+            <div class="container bpv2-cta__inner">
+                <div class="bpv2-cta__header">
+                    <div class="bpv2-cta__header-text">
+                        <h2 class="bpv2-cta__title" id="bpv2-cta-heading">From Cryptographic Insight to Quantum-Safe
+                            Action</h2>
+                        <p class="bpv2-cta__intro">Insight only matters once it changes what you do next. Whether
+                            you're still mapping your cryptographic exposure or ready to start migrating, pick the path
+                            below that matches where you are.</p>
+                    </div>
+                    <div class="bpv2-cta__actions">
+                        <a href="/company/contact-us.html" class="bpv2-cta__btn-primary">Book Your Quantum Readiness
+                            Demo</a>
+                        <a href="/solutions.html" class="bpv2-cta__link">
+                            <span>Explore Cryptographic Posture Management Solutions</span>
+                            <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11"
+                                aria-hidden="true" />
+                        </a>
+                        <a href="/products/isara-advance-cryptographic-inventory-and-risk-assessment-tool.html"
+                            class="bpv2-cta__link">
+                            <span>Build a Complete Cryptographic Inventory</span>
+                            <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11"
+                                aria-hidden="true" />
+                        </a>
+                        <a href="/products/isara-radiate-quantum-safe-toolkit.html" class="bpv2-cta__link">
+                            <span>Deploying Quantum-Safe Cryptography Across Environments</span>
+                            <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11"
+                                aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════════════════════
+                     SECTION 4B: RELATED POSTS (copy below into Fred → SECTION)
+                     Replace cards with [[getResources]] in MODX when ready
+                     ══════════════════════════════════════════════════════════ -->
+
+                <div class="bpv2-cta__cards">
+                    <article class="bpv2-card">
+                        <img class="bpv2-card__image" src="/assets/LTS/assets/blog_a.jpg" alt="" width="300"
+                            height="120" />
+                        <div class="bpv2-card__body">
+                            <h3>Cybersecurity in the Age of Quantum Computing</h3>
+                            <p>Computing power has advanced far beyond the invention of the transistor. Today's digital
+                                infrastructures rely on public-key cryptography to safeguard commerce and privacy.</p>
+                            <a class="bpv2-card__link"
+                                href="/blog-posts/what-is-crypto-agility-the-complete-guide-for-enterprise-security-teams.html">
+                                <span>Read More</span>
+                                <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11"
+                                    aria-hidden="true" />
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bpv2-card">
+                        <img class="bpv2-card__image" src="/assets/LTS/assets/blog-b.jpg" alt="" width="300"
+                            height="120" />
+                        <div class="bpv2-card__body">
+                            <h3>Strategic Risk Management: Aligning Cryptography with Business Goals</h3>
+                            <p>With so many urgent issues demanding attention, future risks can feel like tomorrow's
+                                problem. Some of the most consequential issues cannot wait.</p>
+                            <a class="bpv2-card__link"
+                                href="/blog-posts/strategic-risk-management-tips-for-aligning-cryptography-with-business-goals.html">
+                                <span>Read More</span>
+                                <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11"
+                                    aria-hidden="true" />
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="bpv2-card">
+                        <img class="bpv2-card__image" src="/assets/LTS/assets/blog-c.png" alt="" width="300"
+                            height="120" />
+                        <div class="bpv2-card__body">
+                            <h3>Overcoming Challenges in Quantum Readiness</h3>
+                            <p>Feeling overwhelmed about where to start with quantum readiness? You are not alone. Many
+                                organizations have not taken steps to prepare.</p>
+                            <a class="bpv2-card__link"
+                                href="/blog-posts/overcoming-challenges-in-quantum-readiness-isara-webinar-recap.html">
+                                <span>Read More</span>
+                                <img src="/assets/LTS/assets/arrow-down.svg" alt="" width="11" height="11"
+                                    aria-hidden="true" />
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="bpv2-cta__footer">
+                    <a class="bpv2-cta__btn-primary" href="/blog-posts.html">View All Articles</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODX: paste modx/chunks/blog-post-v2-js.html into FOOTER-SCRIPTS for blog-post-v2 template -->
+    <script src="/modx/chunks/blog-post-v2.js"></script>
+
+</body>
+
+</html>

@@ -151,11 +151,28 @@
     max-width: 469px;
 }
 
-.dinner-hero__image img {
+.dinner-hero__carousel {
+    position: relative;
     width: 100%;
-    height: auto;
+    /* Lock the aspect ratio to match the original 469×387 image */
+    aspect-ratio: 469 / 387;
     border-radius: 20px;
-    display: block;
+    overflow: hidden;
+}
+
+.dinner-hero__carousel-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.dinner-hero__carousel-slide--active {
+    opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -284,7 +301,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.8;
     display: block;
 }
 
@@ -309,22 +326,51 @@
     width: 100%;
 }
 
-.dinner-testimonials__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+/* ── Slider viewport: clips the track with a rounded mask ── */
+.dinner-testimonials__slider-viewport {
     width: 100%;
+    overflow: hidden;
+    /* border-radius + overflow:hidden = rounded clip mask.
+       Cards entering/exiting are cut with the same 20px curve they already
+       have, so no straight-edge flash during the slide transition. */
+    border-radius: 20px;
+    /* Vertical breathing room so the drop-shadow isn't clipped */
+    padding: 6px 0;
+    margin: -6px 0;
+    box-sizing: content-box;
 }
 
+/* ── Slider: grab cursor, no overflow so border-radius is never clipped ── */
+.dinner-testimonials__slider {
+    width: 100%;
+    cursor: grab;
+    user-select: none;
+}
+
+.dinner-testimonials__slider:active {
+    cursor: grabbing;
+}
+
+.dinner-testimonials__track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* No will-change here — it creates a compositing layer that conflicts
+       with overflow:hidden on the viewport and causes border-radius loss */
+}
+
+/* ── Individual card ── */
 .dinner-review {
+    /* width is set by JS to exactly the slider viewport width */
+    flex-shrink: 0;
     background: #fff;
     border: 1px solid var(--ISARA-Light-Grey, #ececec);
     border-radius: 20px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    box-sizing: border-box;
 }
 
 .dinner-review__author {
@@ -362,10 +408,40 @@
     margin: 0;
 }
 
+/* ── Dot pagination ── */
+.dinner-testimonials__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dinner-testimonials__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    flex-shrink: 0;
+}
+
+.dinner-testimonials__dot--active {
+    background: #fff;
+    transform: scale(1.15);
+}
+
+.dinner-testimonials__dot:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 @media (min-width: 768px) {
     .dinner-testimonials__inner {
         padding: 80px 140px 100px;
-        gap: 41px;
+        gap: 30px;
     }
 
     .dinner-testimonials__title {
@@ -373,15 +449,8 @@
         max-width: 876px;
     }
 
-    .dinner-testimonials__cards {
-        flex-direction: row;
-        align-items: stretch;
-        gap: 31px;
-    }
-
     .dinner-review {
-        flex: 1 0 0;
-        min-width: 0;
+        padding: 40px 50px;
     }
 }
 

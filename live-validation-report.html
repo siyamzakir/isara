@@ -1,14 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" class="validation-report-standalone">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live Cryptographic Validation Report | ISARA</title>
-    <link rel="stylesheet" href="src/css/validationreport.css" />
+    <link rel="stylesheet" href="/assets/LTS/validationreport.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+        :root {
+            --validation-red: #ec1c24;
+            --validation-black: #000;
+            --validation-white: #fff;
+            --validation-light-grey: #ececec;
+            --validation-dark-grey: #5a5756;
+            --validation-font-body: "Akkurat LL", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --validation-font-display: "Roboto", var(--validation-font-body);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100%;
+            font-family: var(--validation-font-body);
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--validation-black);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .validation-report {
+            margin: 0;
+        }
+
+        .validation-report__hero {
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            min-height: 770px;
+            min-height: min(100vh, 900px);
+            overflow: hidden;
+        }
+
+        .validation-report__bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .validation-report__bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--validation-black);
+            z-index: 0;
+        }
+
+        .validation-report__bg img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .validation-report__inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: clamp(40px, 6vw, 80px) clamp(24px, 5vw, 64px);
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 56px;
+            align-items: center;
+        }
+
+        .validation-report__copy {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 36rem;
+        }
+
+        .validation-report__title {
+            margin: 0;
+            font-family: var(--validation-font-display);
+            font-weight: 300;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
+            color: var(--validation-white);
+        }
+
+        .validation-report__lead {
+            margin: 0;
+            font-family: var(--validation-font-body);
+            font-weight: 300;
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            line-height: 1.75rem;
+            color: var(--validation-white);
+        }
+
+        .validation-report__chip {
+            margin: 0;
+            align-self: flex-start;
+            padding: 6px;
+            border: 0.75px solid var(--validation-red);
+            border-radius: 3.75px;
+            font-family: var(--validation-font-body);
+            font-weight: 400;
+            font-size: 11.25px;
+            letter-spacing: -0.225px;
+            line-height: normal;
+            text-transform: uppercase;
+            color: var(--validation-white);
+        }
+
+        .validation-report__form-panel {
+            background: var(--validation-white);
+            border: 1px solid var(--validation-light-grey);
+            border-radius: 16px;
+            box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.1);
+            padding: 35px 29px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .validation-report__form-title {
+            margin: 0;
+            font-family: var(--validation-font-display);
+            font-weight: 500;
+            font-size: 21px;
+            line-height: normal;
+            text-align: center;
+            color: var(--validation-black);
+        }
+
+        .validation-report__accent {
+            color: var(--validation-red);
+        }
+
+        #hubspot-contact-form {
+            width: 100%;
+        }
+
+        #hubspot-contact-form iframe {
+            width: 100% !important;
+            display: block;
+            border: 0;
+        }
+
+        @media (max-width: 960px) {
+            .validation-report__inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .validation-report__copy {
+                max-width: none;
+            }
+
+            .validation-report__hero {
+                min-height: auto;
+                padding-bottom: 24px;
+            }
+        }
+    </style>
 </head>
 
-<body class="validation-report-standalone">
+<body>
     <main class="validation-report" id="main">
         <section class="validation-report__hero" aria-labelledby="validation-report-heading">
             <div class="validation-report__bg" aria-hidden="true">
@@ -32,10 +206,15 @@
                     <h2 class="validation-report__form-title">
                         Get Your <span class="validation-report__accent">Free</span> Cryptographic Validation Report
                     </h2>
-                    
-                    <div class="validation-report__embed" id="" aria-label="Request form">
-                        <script src="https://js.hsforms.net/forms/embed/4597660.js" defer></script>
-                        <div class="hs-form-frame" data-region="na1" data-form-id="0a60d0aa-d2eb-4e45-b65b-afe8a95757af" data-portal-id="4597660"></div>
+                    <div id="hubspot-contact-form"></div>
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+                    <script>
+                        hbspt.forms.create({
+                            portalId: "4597660",
+                            formId: "7a2ac413-7ce1-43ae-92ae-9c9294202bac",
+                            target: "#hubspot-contact-form"
+                        });
+                    </script>
                 </div>
             </div>
         </section>

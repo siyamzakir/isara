@@ -1,0 +1,64 @@
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+
+/* ISARA button — same as isara-btn + isara-btn-danger on main site */
+.isara-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: "Roboto Mono", ui-monospace, monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.42px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+button.isara-btn {
+  font: inherit;
+}
+
+.isara-btn-danger {
+  color: #fff;
+  background-color: #ec1c24;
+  transition: background-color 300ms ease;
+}
+
+.isara-btn-danger:hover {
+  background-color: rgba(236, 28, 36, 0.75);
+}
+
+.isara-btn-danger:focus-visible {
+  outline: 2px solid #ec1c24;
+  outline-offset: 2px;
+}
+</style>
+
+<div class="d-flex" data-fred-block-class="col-{{baseCol}} col-sm-{{baseCol}} col-md-{{mdCol}} col-lg-{{lgCol}}">
+    <div class="card {{borderset}} flex-fill{% if boxshadow is not empty %} {{boxshadow}}{% endif %}{% if boxhovershadow %} hovershadow{% endif %} {{rounding}} mt-{{marginTop}} mb-{{marginBottom}} ml-{{marginLeft}} mr-{{marginRight}} pt-{{paddingTop}} pb-{{paddingBottom}} pl-{{paddingLeft}} pr-{{paddingRight}}" style="width:100%;background:{# FOREGROUND-IMG #}{% if fg_image_picker %}url({{fg_image_picker}}){% if fg_image_repeat %} {{fg_image_repeat}}{% endif %}{% if fg_image_position_val %} {{fg_image_position_val}}{% else %}{% if fg_image_position %} {{fg_image_position}}{% endif %}{% endif %},{% endif %} {# /FOREGROUND-IMG #}linear-gradient({{gradient_angle}}deg, {{gradient_first_colour}} {{gradientoffset}}%, {{gradient_second_colour}}){# BACKGROUND-IMG #}{% if bg_image_picker %}, url({{bg_image_picker}}){% if bg_image_repeat %} {{bg_image_repeat}}{% endif %}{% if bg_image_position_val %} {{bg_image_position_val}}{% else %}{% if bg_image_position %} {{bg_image_position}}{% endif %}{% endif %}{% endif %}{# /BACKGROUND-IMG #};background-size:{% if fg_image_picker %}{% if fg_image_size_val %}{{fg_image_size_val}}{% else %}{% if fg_image_size %}{{fg_image_size}}{% endif %}{% endif %},{% endif %}auto{% if bg_image_picker %}, {% if bg_image_size_val %}{{bg_image_size_val}}{% else %}{% if bg_image_size %}{{bg_image_size}}{% endif %}{% endif %};{% endif %}" {% if enableAOS %} data-aos="{{AOStype}}" data-aos-duration="{{AOSduration}}" data-aos-offset="{{AOSoffset}}" data-aos-easing="{{AOSeasing}}" data-aos-delay="{{AOSdelay}}" data-aos-anchor-placement="{{AOSanchor}}" data-aos-once="{{AOSonce}}"{% endif %}>
+        {% if cardHeader %}
+        <div class="card-header {% if cardHeaderBg %}border-0{% endif %}" {% if cardHeaderBg %}style="background:none;"{% endif %} data-fred-name="cardHeader" data-fred-rte="true" data-fred-rte-config="basic"><h5 style="padding: 0px; margin: 0px; text-align: center;"><strong>Featured</strong></h5></div>
+        {% endif %}
+        {% if imgPos=='top' %}
+        <div class="text-center"><img src="{{cardImg}}" class="card-img-top {{imageFormat}} mx-auto w-{{cardImgWidth}}{% if rounding=='rounded-0' %} rounded-0{% endif %}" alt="{{imgAlt}}" style="opacity:.{% if image_opacity < 10 %}0{% endif %}{{image_opacity}};padding:{{paddingCardImgTop}}px {{paddingCardImgRight}}px {{paddingCardImgBottom}}px {{paddingCardImgLeft}}px;margin:{{marginCardImgTop}}px {{marginCardImgRight}}px {{marginCardImgBottom}}px {{marginCardImgLeft}}px;"></div>
+        {% endif %}
+        {% if cardBody %}
+        <div class="card-body pt-{{paddingCardBodyTop}} pb-{{paddingCardBodyBottom}} pl-{{paddingCardBodyLeft}} pr-{{paddingCardBodyRight}}" data-fred-name="cardBody" data-fred-rte="true" data-fred-rte-config="basic" style="margin:{{marginCardBodyTop}}px {{marginCardBodyRight}}px {{marginCardBodyBottom}}px {{marginCardBodyLeft}}px;">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">Body Text</p>
+        </div>
+        {% endif %}
+        {% if imgPos=='bottom' %}
+        <div class="text-center"><img src="{{cardImg}}" class="card-img-bottom w-{{cardImgWidth}}{% if rounding=='rounded-0' %} rounded-0{% endif %} pt-{{paddingCardImgTop}} pb-{{paddingCardImgBottom}} pl-{{paddingCardImgLeft}} pr-{{paddingCardImgRight}}" alt="{{imgAlt}}" style="opacity:.{% if image_opacity < 10 %}0{% endif %}{{image_opacity}};"></div>
+        {% endif %}
+        {% if cardFooter %}
+        <div class="card-footer {%if cardFooterBg%}border-0{%endif%}" {%if cardFooterBg%}style="background:none;"{%endif%} data-fred-name="cardFooter" data-fred-rte="true" data-fred-rte-config="basic"><p style="text-align: center; margin: 0px; padding: 0px;"><a class="isara-btn isara-btn-danger" href="#">Button One</a>&nbsp;&nbsp;&nbsp;<a class="isara-btn isara-btn-danger" href="#">Button Two</a></p></div>
+        {% endif %}
+    </div>
+</div>
