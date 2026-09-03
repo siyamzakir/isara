@@ -1,0 +1,76 @@
+        (function () {
+            var headerOffset = 80;
+
+            // Smooth scroll for TOC links
+            document.querySelectorAll('.bpv2-toc__link').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var href = this.getAttribute('href');
+                    if (!href || href === '#') return;
+                    var target = document.querySelector(href);
+                    if (!target) return;
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: target.offsetTop - headerOffset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // TOC active-state tracking
+            var tocLinks = document.querySelectorAll('.bpv2-toc__link');
+            if (!tocLinks.length) return;
+
+            var sections = [];
+            tocLinks.forEach(function (link) {
+                var id = link.getAttribute('href');
+                var section = id ? document.querySelector(id) : null;
+                if (section) sections.push({ link: link, section: section });
+            });
+            if (!sections.length) return;
+
+            function setActive(activeLink) {
+                tocLinks.forEach(function (link) {
+                    link.classList.toggle('is-active', link === activeLink);
+                });
+            }
+
+            var observer = new IntersectionObserver(
+                function (entries) {
+                    var visible = entries
+                        .filter(function (e) { return e.isIntersecting; })
+                        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+                    if (!visible.length) return;
+                    var match = sections.find(function (s) { return s.section === visible[0].target; });
+                    if (match) setActive(match.link);
+                },
+                { rootMargin: '-80px 0px -55% 0px', threshold: 0.1 }
+            );
+
+            sections.forEach(function (s) { observer.observe(s.section); });
+
+            // FAQ accordion
+            document.querySelectorAll('.bpv2-faq-item').forEach(function (item) {
+                var btn = item.querySelector('.bpv2-faq-item__btn');
+                if (!btn) return;
+                var answer = document.getElementById(btn.getAttribute('aria-controls'));
+                if (!answer) return;
+
+                btn.addEventListener('click', function () {
+                    var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+                    document.querySelectorAll('.bpv2-faq-item').forEach(function (other) {
+                        var otherBtn = other.querySelector('.bpv2-faq-item__btn');
+                        var otherAnswer = otherBtn
+                            ? document.getElementById(otherBtn.getAttribute('aria-controls'))
+                            : null;
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                        if (otherAnswer) otherAnswer.hidden = true;
+                    });
+
+                    if (!isOpen) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.hidden = false;
+                    }
+                });
+            });
+        })();
